@@ -1,0 +1,219 @@
+/* ============================================================
+   Ennea Evolution — design system
+   Brand: teal #155F73 · marigold #EF9C20
+   Type:  Fraunces (display serif) · Figtree (sans)
+   ============================================================ */
+
+:root {
+  /* brand */
+  --teal: #155f73;
+  --teal-700: #124f60;
+  --teal-900: #0e3c49;
+  --teal-950: #0b303a;
+  --marigold: #ef9c20;
+  --marigold-600: #d9860c;
+
+  /* neutrals — warm, paper-like */
+  --cream: #fbf7ef;
+  --cream-2: #f4ede0;
+  --cream-3: #ece2d1;
+  --paper: #ffffff;
+
+  /* ink + text */
+  --ink: #16323a;
+  --body: #3f5258;
+  --muted: #6d7c80;
+  --line: #e4dccd;
+  --line-strong: #d8cdb8;
+
+  /* tints */
+  --teal-tint: #eaf1f2;
+  --marigold-tint: #fcf2dd;
+
+  /* type */
+  --font-serif: "Fraunces", Georgia, "Times New Roman", serif;
+  --font-sans: "Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+  /* layout */
+  --maxw: 1160px;
+  --maxw-narrow: 760px;
+  --gutter: clamp(1.25rem, 4vw, 2.5rem);
+  --radius: 14px;
+  --radius-lg: 22px;
+
+  --shadow-sm: 0 1px 2px rgba(14, 60, 73, 0.05), 0 6px 18px rgba(14, 60, 73, 0.06);
+  --shadow-md: 0 8px 30px rgba(14, 60, 73, 0.10);
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--cream);
+  color: var(--body);
+  font-family: var(--font-sans);
+  font-size: 1.0625rem;
+  line-height: 1.7;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* ---------- typography ---------- */
+h1, h2, h3, h4 {
+  font-family: var(--font-serif);
+  color: var(--ink);
+  font-weight: 400;
+  line-height: 1.12;
+  letter-spacing: -0.01em;
+  margin: 0 0 0.5em;
+  font-optical-sizing: auto;
+}
+
+h1 { font-size: clamp(2.35rem, 5.2vw, 3.7rem); line-height: 1.06; }
+h2 { font-size: clamp(1.9rem, 3.6vw, 2.7rem); }
+h3 { font-size: clamp(1.3rem, 2.2vw, 1.6rem); }
+h4 { font-size: 1.18rem; }
+
+p { margin: 0 0 1.15rem; }
+.lead { font-size: clamp(1.18rem, 1.9vw, 1.45rem); line-height: 1.55; color: var(--ink); }
+
+a { color: var(--teal); text-decoration: none; }
+a:hover { color: var(--teal-900); }
+
+strong { font-weight: 600; color: var(--ink); }
+em { font-style: italic; }
+
+::selection { background: var(--marigold-tint); color: var(--teal-950); }
+
+/* ---------- layout helpers ---------- */
+.container { width: 100%; max-width: var(--maxw); margin-inline: auto; padding-inline: var(--gutter); }
+.narrow { max-width: var(--maxw-narrow); margin-inline: auto; }
+
+.section { padding-block: clamp(3.5rem, 8vw, 6.5rem); }
+.section-tight { padding-block: clamp(2.5rem, 5vw, 4rem); }
+
+.bg-cream2 { background: var(--cream-2); }
+.bg-paper { background: var(--paper); }
+.bg-teal { background: var(--teal-900); color: #e9f0f1; }
+.bg-teal h2, .bg-teal h3 { color: #fff; }
+
+.eyebrow {
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--marigold-600);
+  margin: 0 0 1rem;
+}
+.bg-teal .eyebrow { color: var(--marigold); }
+
+.center { text-align: center; }
+
+/* page hero (interior pages) */
+.page-hero {
+  background:
+    radial-gradient(120% 90% at 80% -10%, #fdf4e2 0%, rgba(253,244,226,0) 55%),
+    linear-gradient(180deg, #fdfaf3 0%, var(--cream) 100%);
+  border-bottom: 1px solid var(--line);
+  padding-block: clamp(3.5rem, 9vw, 7rem) clamp(2.5rem, 6vw, 4.5rem);
+}
+.page-hero h1 { max-width: 20ch; margin-bottom: 1.25rem; }
+.page-hero .lead { max-width: 60ch; color: var(--body); }
+
+/* long-form readable column */
+.prose > p { color: var(--body); }
+.prose > p.lead { color: var(--ink); }
+.prose h3 { margin-top: 2.25rem; color: var(--teal-900); }
+.prose h2 { margin-top: 2rem; }
+
+/* ---------- buttons ---------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 0.98rem;
+  line-height: 1;
+  padding: 0.95rem 1.6rem;
+  border-radius: 999px;
+  border: 1.5px solid transparent;
+  cursor: pointer;
+  transition: transform 0.18s ease, background 0.18s ease, color 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease;
+}
+.btn:hover { transform: translateY(-1px); }
+
+.btn-primary { background: var(--marigold); color: var(--teal-950); border-color: var(--marigold); }
+.btn-primary:hover { background: var(--marigold-600); border-color: var(--marigold-600); color: #fff; box-shadow: var(--shadow-md); }
+
+.btn-teal { background: var(--teal); color: #fff; border-color: var(--teal); }
+.btn-teal:hover { background: var(--teal-900); border-color: var(--teal-900); color: #fff; box-shadow: var(--shadow-md); }
+
+.btn-outline { background: transparent; color: var(--teal-900); border-color: var(--line-strong); }
+.btn-outline:hover { border-color: var(--teal); color: var(--teal); background: var(--paper); }
+
+.bg-teal .btn-outline { color: #fff; border-color: rgba(255,255,255,0.4); }
+.bg-teal .btn-outline:hover { border-color: #fff; background: rgba(255,255,255,0.08); color: #fff; }
+
+.btn-row { display: flex; flex-wrap: wrap; gap: 0.85rem; }
+
+/* arrow text link */
+.arrow-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-weight: 600;
+  color: var(--teal);
+}
+.arrow-link .arrow { transition: transform 0.18s ease; }
+.arrow-link:hover .arrow { transform: translateX(4px); }
+
+/* ---------- cards ---------- */
+.card {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: clamp(1.5rem, 3vw, 2.4rem);
+  box-shadow: var(--shadow-sm);
+}
+
+/* ---------- bullet lists (recognition lists) ---------- */
+.ticklist { list-style: none; margin: 0; padding: 0; }
+.ticklist li {
+  position: relative;
+  padding-left: 1.85rem;
+  margin-bottom: 0.85rem;
+  line-height: 1.55;
+}
+.ticklist li::before {
+  content: "";
+  position: absolute;
+  left: 0; top: 0.62em;
+  width: 9px; height: 9px;
+  border-radius: 50%;
+  background: var(--marigold);
+}
+
+/* divider */
+.rule { height: 1px; background: var(--line-strong); border: 0; margin: 0; }
+
+/* small caps tagline */
+.tagline {
+  font-family: var(--font-sans);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--marigold-600);
+}
+
+img { max-width: 100%; display: block; }
+
+/* reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  * { scroll-behavior: auto !important; transition: none !important; }
+}

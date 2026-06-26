@@ -1,0 +1,142 @@
+---
+import Base from "../../layouts/Base.astro";
+
+const doors = [
+  {
+    quote: "I can't stop worrying.",
+    title: "Anxiety & Overthinking",
+    desc: "Thinking feels safe. Doing feels like a cliff.",
+    href: "/personal-work/anxiety-overthinking",
+  },
+  {
+    quote: "I can't decide, and it's wearing me out.",
+    title: "Stay or Go",
+    desc: "A marriage, a faith, a career. The question has been running your life for years.",
+    href: "/personal-work/stay-or-go",
+  },
+  {
+    quote: "I lost myself somewhere along the way.",
+    title: "Coming Back to Yourself",
+    desc: "The roles got louder than the person underneath them.",
+    href: "/personal-work/coming-back-to-yourself",
+  },
+  {
+    quote: "I keep holding myself back.",
+    title: "Confidence & Self-Worth",
+    desc: "You do plenty. You just don't believe in yourself.",
+    href: "/personal-work/confidence-self-worth",
+  },
+  {
+    quote: "I miss someone I love.",
+    title: "The Distance Between You",
+    desc: "They're still right here. Somehow they're still out of reach.",
+    href: "/personal-work/the-distance-between-you",
+  },
+  {
+    quote: "I don't trust my own reality anymore.",
+    title: "Am I the Problem?",
+    desc: "You replay conversations and come away less sure than when you started.",
+    href: "/personal-work/am-i-the-problem",
+  },
+];
+---
+
+<Base title="Personal Work — Ennea Evolution" description="Counseling and coaching for people ready to understand their own lives. Start with the door that sounds most like you.">
+  <section class="page-hero">
+    <div class="container">
+      <p class="eyebrow">Personal Work</p>
+      <h1>Something in your life isn't quite adding up.</h1>
+      <p class="lead">
+        You may not be able to name exactly what's wrong yet. Most people can't. You just know you're anxious, stuck,
+        disconnected, exhausted, doubting yourself, or carrying the same question you've been carrying for years.
+      </p>
+      <p style="max-width:60ch;">You don't have to figure it out before you start. Just start with the one that sounds most like you.</p>
+    </div>
+  </section>
+
+  <!-- DOORS -->
+  <section class="section">
+    <div class="container">
+      <div class="center" style="margin-bottom:2.75rem;">
+        <p class="eyebrow">Pick the door that sounds like you</p>
+      </div>
+      <div class="door-grid">
+        {doors.map((d) => (
+          <a class="door-card" href={d.href}>
+            <p class="door-quote">{d.quote}</p>
+            <h3>{d.title}</h3>
+            <p class="door-desc">{d.desc}</p>
+            <span class="arrow-link">Explore <span class="arrow">→</span></span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY CONNECTED -->
+  <section class="section bg-cream2">
+    <div class="container narrow prose">
+      <p class="eyebrow center">Why these struggles are so often connected</p>
+      <p>At first they look unrelated. Anxiety. A relationship that aches. Self-doubt. Not being able to make a decision. Feeling far from yourself.</p>
+      <p>Underneath, they're often the same thing wearing different clothes. Some part of you is protecting something. A belief that once made complete sense is still shaping what you do, even though the situation that created it has changed.</p>
+      <p>That's why these struggles are so confusing. The pattern isn't irrational. It makes sense from the inside. And because it makes sense, fighting it usually doesn't work. Understanding it does.</p>
+      <p>Most people already know their patterns. The question was never whether they exist. It's why they make so much sense to a part of you. Once that becomes clear, change gets easier — not because you're forcing yourself, but because you're finally working with yourself instead of against yourself.</p>
+    </div>
+  </section>
+
+  <!-- WHAT PEOPLE GET BACK -->
+  <section class="section">
+    <div class="container narrow prose">
+      <p class="eyebrow center">What people get back</p>
+      <p>Most people come in focused on the problem: the anxiety, the relationship, the decision, the self-doubt. What they get back is usually bigger than that.</p>
+      <p class="lead">They get themselves back.</p>
+      <p>You stop arguing with yourself. You stop treating every decision like a verdict on your worth. You stop carrying relationships alone. You stop reacting to stories that feel true but aren't.</p>
+      <p>And slowly, things start to make sense. Not just the problem you came in with. You.</p>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section bg-teal center">
+    <div class="container narrow">
+      <h2>You don't have to know the answer.</h2>
+      <p style="color:#cfe0e2; max-width:55ch; margin-inline:auto;">
+        You only have to recognize the question. Pick the door that sounds most like you. If you're not sure, we'll figure it out together.
+      </p>
+      <div class="btn-row" style="justify-content:center; margin-top:1.75rem;">
+        <a href="/get-started" class="btn btn-primary">Get Started</a>
+      </div>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .door-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: clamp(1rem, 2.2vw, 1.5rem);
+  }
+  .door-card {
+    display: flex;
+    flex-direction: column;
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-lg);
+    padding: clamp(1.5rem, 2.5vw, 2rem);
+    box-shadow: var(--shadow-sm);
+    color: var(--body);
+    transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+  }
+  .door-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); border-color: var(--line-strong); }
+  .door-quote {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-size: 1.15rem;
+    color: var(--marigold-600);
+    margin-bottom: 0.6rem;
+  }
+  .door-card h3 { color: var(--teal-900); margin-bottom: 0.5rem; }
+  .door-desc { flex: 1; margin-bottom: 1rem; }
+
+  @media (max-width: 900px) { .door-grid { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 560px) { .door-grid { grid-template-columns: 1fr; } }
+</style>

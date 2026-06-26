@@ -1,0 +1,108 @@
+---
+import Base from "../layouts/Base.astro";
+---
+
+<Base title="Get Started — Ennea Evolution" description="Reach out, we'll talk, and we'll decide together what makes the most sense for you. Counseling and coaching, and team work, in Cache Valley, Utah and by Zoom.">
+  <section class="page-hero">
+    <div class="container">
+      <p class="eyebrow">Get Started</p>
+      <h1>Start here.</h1>
+      <p class="lead">Whichever door brought you here, beginning is simple: reach out, we'll talk, and we'll decide together what makes the most sense for you.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container two-col">
+      <div class="path card">
+        <h3>Personal counseling &amp; coaching</h3>
+        <p><strong>Reach out.</strong> Use the form, or email me directly. Tell me as much or as little as you want.</p>
+        <p><strong>We talk.</strong> A free fifteen-minute call; no scripts, no pressure. You'll get a feel for me, I'll get a sense of what's happening, and we'll both know whether this is a fit.</p>
+        <p><strong>We begin.</strong> Sessions run fifty minutes to an hour, in person if you're in the Logan, Utah area, or by Zoom, which is how most of my clients meet with me.</p>
+        <p><em>The practical details.</em> Sessions are offered on a sliding scale of $125 to $190. You choose the rate that's fair and sustainable for your circumstances; I trust you to choose honestly, and that trust is part of what keeps this work accessible. My practice is private pay. I don't bill insurance or provide superbills. If you need to cancel or reschedule, give me as much notice as you can.</p>
+        <p><em>One more option.</em> For seasons that call for more concentrated work, I occasionally build custom intensive programs for individual clients. If that's what you're looking for, say so when you reach out.</p>
+      </div>
+      <div class="path card">
+        <h3>Workshops, programs &amp; team support</h3>
+        <p><strong>Tell me what's not working.</strong> A team that's stuck, managers who need development, a culture you want to build on purpose. The form works, or email me directly.</p>
+        <p><strong>We talk it through.</strong> I'll ask about your team, your goals, and what's been tried. Then I'll tell you honestly whether I can help.</p>
+        <p><strong>You get a plan.</strong> A clear proposal: what we'd do, what's included, and what it costs; whether that's one workshop or a multi-year build.</p>
+        <p>I'm based in Cache Valley, Utah, and travel throughout Utah, Idaho, and parts of Colorado for team trainings. Many engagements also run over Zoom.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section bg-cream2">
+    <div class="container narrow">
+      <div class="center" style="margin-bottom:2rem;">
+        <p class="eyebrow">Contact</p>
+        <h2>Tell me as much or as little as you want.</h2>
+      </div>
+      <form class="contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="contact" />
+        <p class="hidden-field"><label>Don't fill this out: <input name="bot-field" /></label></p>
+        <div class="row">
+          <div class="field">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" required />
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" required />
+          </div>
+        </div>
+        <div class="field">
+          <label for="interest">I'm interested in</label>
+          <select id="interest" name="interest">
+            <option>Personal Work</option>
+            <option>Professional Work</option>
+            <option>Not sure yet</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5"></textarea>
+        </div>
+        <button type="submit" class="btn btn-teal">Send message</button>
+      </form>
+      <p class="contact-line">
+        <a href="mailto:enneaevolution@gmail.com">enneaevolution@gmail.com</a>
+        <span class="dot">·</span>
+        <a href="tel:+14358810193">435-881-0193</a>
+        <span class="dot">·</span>
+        Cache Valley, Utah
+      </p>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(1.25rem, 3vw, 2rem); align-items: start; }
+  .path h3 { color: var(--teal-900); margin-top: 0; }
+  .path p { color: var(--body); font-size: 0.98rem; }
+
+  .contact-form { display: flex; flex-direction: column; gap: 1.1rem; }
+  .contact-form .row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.1rem; }
+  .field { display: flex; flex-direction: column; gap: 0.4rem; }
+  .field label { font-weight: 600; font-size: 0.9rem; color: var(--ink); }
+  .field input, .field select, .field textarea {
+    font: inherit;
+    padding: 0.85rem 1rem;
+    border: 1.5px solid var(--line-strong);
+    border-radius: 12px;
+    background: var(--paper);
+    color: var(--ink);
+  }
+  .field input:focus, .field select:focus, .field textarea:focus {
+    outline: none; border-color: var(--teal); box-shadow: 0 0 0 3px var(--teal-tint);
+  }
+  .contact-form .btn { align-self: flex-start; justify-content: center; }
+  .hidden-field { display: none; }
+
+  .contact-line { text-align: center; margin-top: 1.75rem; color: var(--body); }
+  .contact-line .dot { color: var(--marigold); margin: 0 0.5rem; }
+
+  @media (max-width: 760px) {
+    .two-col { grid-template-columns: 1fr; }
+    .contact-form .row { grid-template-columns: 1fr; }
+  }
+</style>

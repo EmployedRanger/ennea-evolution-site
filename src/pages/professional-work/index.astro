@@ -1,0 +1,158 @@
+---
+import Base from "../../layouts/Base.astro";
+
+const offerings = [
+  {
+    cat: "Foundation",
+    title: "People Make Sense",
+    desc: "Two workshops that build one shared language for communication, conflict, feedback, and teamwork: Seeing Yourself Clearly and Seeing Others Clearly. Most companies start here.",
+    href: "/professional-work/people-make-sense",
+  },
+  {
+    cat: "Development",
+    title: "Manage With Meaning",
+    desc: "The core manager workshop. Trust, motivation, accountability, delegation, feedback, and the conversations managers have every day. Employees experience a company through their managers, and that side of the job can be taught.",
+    href: "/professional-work/manage-with-meaning",
+  },
+  {
+    cat: "Development",
+    title: "Workshops",
+    desc: "Practical sessions built around what your team is working through: communication, conflict, trust, boundaries, accountability, difficult conversations, and more. Teams leave using the tools the same week.",
+    href: "/professional-work/workshops",
+  },
+  {
+    cat: "Support",
+    title: "Employee Support",
+    desc: "Confidential counseling on retainer, so help is already there when a person needs it, often long before it would reach a manager's desk or a resignation letter. And managers get to stay managers.",
+    href: "/professional-work/employee-counseling-team-repair",
+  },
+  {
+    cat: "Support",
+    title: "Team Repair",
+    desc: "We find what each side is actually reacting to, clear the misunderstandings, rebuild the working trust, and get the team back to the work. Most personality conflicts turn out to be two reasonable interpretations that never got checked.",
+    href: "/professional-work/employee-counseling-team-repair",
+  },
+];
+---
+
+<Base title="Professional Work — Ennea Evolution" description="People-first development for companies: workshops, manager development, employee support, and team repair. The work runs through people.">
+  <section class="page-hero">
+    <div class="container">
+      <p class="eyebrow">Professional Work</p>
+      <h1>The work is never just the work.</h1>
+      <p class="lead">Every deadline, project, handoff, meeting, and difficult conversation runs through a person.</p>
+      <p style="max-width:60ch;">
+        When people understand each other, work moves faster. When they don't, even good systems start creating friction.
+        That's the work I do with companies: helping the people side of the business run as well as the rest of it.
+      </p>
+      <div class="btn-row" style="margin-top:1.75rem;">
+        <a href="/get-started" class="btn btn-teal">Let's Talk</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY GOOD PEOPLE MISS -->
+  <section class="section">
+    <div class="container narrow prose">
+      <p class="eyebrow center">Why good people keep missing each other</p>
+      <p>Most teams are full of good people. And even good people miss each other.</p>
+      <p>Two people leave the same meeting with different understandings of what was decided. Feedback gets softened on its way up until it stops saying anything. A talented manager runs the projects well and isn't sure what to do when the problem is a person. A conflict goes quiet, and everyone calls it resolved.</p>
+      <p>None of this means anything is wrong with anyone. It's what happens when humans work together without a shared way of understanding each other. Every company has some version of it. The companies that work on it have a real advantage.</p>
+    </div>
+  </section>
+
+  <!-- PEOPLE FIRST -->
+  <section class="section bg-cream2">
+    <div class="container narrow prose">
+      <h2 class="center" style="margin-top:0;">People first. Performance follows.</h2>
+      <p>When people don't feel understood, they spend energy protecting themselves. They hold back opinions. They soften the truth. They avoid a conversation, or rehearse it for two weeks before having it. None of that shows up on a report, but all of it slows the work down.</p>
+      <p>When people do feel understood, that energy comes back to the work. They speak up sooner, so problems surface while they're small. They take feedback at face value, so it actually changes things. They spend the meeting on the problem instead of on each other.</p>
+      <p class="lead">Understanding people isn't the soft side of business. It's the fast side.</p>
+    </div>
+  </section>
+
+  <!-- HOW WE CAN WORK TOGETHER -->
+  <section class="section">
+    <div class="container">
+      <div class="center narrow" style="margin-bottom:2.75rem;">
+        <p class="eyebrow">How we can work together</p>
+        <p>Most companies start with People Make Sense. From there, some develop their managers, some strengthen the everyday skills the work runs on, and some add support for the people carrying it.</p>
+      </div>
+      <div class="offer-grid">
+        {offerings.map((o) => (
+          <a class="offer-card" href={o.href}>
+            <p class="offer-cat">{o.cat}</p>
+            <h3>{o.title}</h3>
+            <p class="offer-desc">{o.desc}</p>
+            <span class="arrow-link">Learn more <span class="arrow">→</span></span>
+          </a>
+        ))}
+        <div class="offer-card offer-note">
+          <h3>Start where it makes sense</h3>
+          <p class="offer-desc">Some companies start with a single workshop. Some begin with manager development. Some build a shared language across the whole organization. There's no required sequence. Start with the problem you're trying to solve. Everything else can be built from there.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TWO ROOMS -->
+  <section class="section bg-cream2">
+    <div class="container narrow prose">
+      <p class="eyebrow center">Two rooms, one person</p>
+      <p>My time is split between two rooms: the counseling room and the training room. In one, I help people make sense of themselves. In the other, I help teams make sense of each other.</p>
+      <p>The two feed each other. The counseling work keeps the trainings grounded in how people actually work. The training work keeps the counseling practical. Companies get someone who studies human behavior up close every week and teaches it in a way teams can immediately put to use.</p>
+      <p>My background includes counseling, coaching, mediation, conflict resolution, IFS, and Coherence Therapy.</p>
+      <p class="center" style="margin-top:1.5rem;"><a href="/about" class="arrow-link">More about me <span class="arrow">→</span></a></p>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section bg-teal center">
+    <div class="container narrow">
+      <p class="eyebrow">Bring this to your team</p>
+      <h2>Tell me what's not working.</h2>
+      <p style="color:#cfe0e2; max-width:55ch; margin-inline:auto;">
+        I'll tell you honestly whether I can help and what it would look like, whether that's one workshop or a culture build.
+      </p>
+      <div class="btn-row" style="justify-content:center; margin-top:1.75rem;">
+        <a href="/get-started" class="btn btn-primary">Contact Candace</a>
+      </div>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .offer-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: clamp(1rem, 2.2vw, 1.5rem);
+  }
+  .offer-card {
+    display: flex;
+    flex-direction: column;
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-top: 4px solid var(--teal);
+    border-radius: var(--radius-lg);
+    padding: clamp(1.5rem, 2.5vw, 2rem);
+    box-shadow: var(--shadow-sm);
+    color: var(--body);
+    transition: transform 0.18s ease, box-shadow 0.18s ease;
+  }
+  .offer-card[href]:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
+  .offer-cat {
+    font-size: 0.74rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--marigold-600);
+    margin-bottom: 0.6rem;
+  }
+  .offer-card h3 { color: var(--teal-900); margin-bottom: 0.6rem; }
+  .offer-desc { flex: 1; font-size: 0.97rem; margin-bottom: 1rem; }
+  .offer-note { border-top-color: var(--marigold); background: var(--cream); }
+  .offer-note .offer-desc { margin-bottom: 0; }
+
+  @media (max-width: 900px) { .offer-grid { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 560px) { .offer-grid { grid-template-columns: 1fr; } }
+</style>
