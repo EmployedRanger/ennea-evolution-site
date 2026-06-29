@@ -201,6 +201,52 @@ em { font-style: italic; }
 /* divider */
 .rule { height: 1px; background: var(--line-strong); border: 0; margin: 0; }
 
+/* ---------- doorway cards (used where the copy says "door") ---------- */
+.doorway {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(180deg, #fffdf8 0%, var(--paper) 30%);
+  border: 2px solid var(--teal);
+  border-radius: 48% 48% 8px 8px / 16% 16% 3% 3%;
+  padding: clamp(3.25rem, 6vw, 4.5rem) clamp(1.6rem, 3vw, 2.4rem) clamp(1.6rem, 3vw, 2.2rem);
+  box-shadow: var(--shadow-sm);
+  color: var(--body);
+  transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+}
+/* inset door panel */
+.doorway::before {
+  content: "";
+  position: absolute;
+  inset: 11px;
+  border: 1.5px solid var(--line-strong);
+  border-radius: 47% 47% 5px 5px / 15% 15% 2% 2%;
+  pointer-events: none;
+  transition: border-color 0.22s ease;
+}
+/* doorknob */
+.doorway::after {
+  content: "";
+  position: absolute;
+  right: 26px;
+  top: 56%;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--marigold);
+  box-shadow: 0 0 0 3px rgba(239, 156, 32, 0.16);
+  transition: transform 0.22s ease;
+}
+.doorway:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--teal-900);
+}
+.doorway:hover::before { border-color: var(--marigold); }
+.doorway:hover::after { transform: scale(1.15); }
+.doorway > * { position: relative; }
+.doorway .arrow-link { margin-top: auto; padding-top: 0.6rem; }
+
 /* small caps tagline */
 .tagline {
   font-family: var(--font-sans);

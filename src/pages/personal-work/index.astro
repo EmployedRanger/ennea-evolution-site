@@ -62,7 +62,7 @@ const doors = [
       </div>
       <div class="door-grid">
         {doors.map((d) => (
-          <a class="door-card" href={d.href}>
+          <a class="doorway" href={d.href}>
             <p class="door-quote">{d.quote}</p>
             <h3>{d.title}</h3>
             <p class="door-desc">{d.desc}</p>
@@ -113,20 +113,9 @@ const doors = [
   .door-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: clamp(1rem, 2.2vw, 1.5rem);
+    gap: clamp(1.25rem, 2.5vw, 2rem);
   }
-  .door-card {
-    display: flex;
-    flex-direction: column;
-    background: var(--paper);
-    border: 1px solid var(--line);
-    border-radius: var(--radius-lg);
-    padding: clamp(1.5rem, 2.5vw, 2rem);
-    box-shadow: var(--shadow-sm);
-    color: var(--body);
-    transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
-  }
-  .door-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); border-color: var(--line-strong); }
+  .door-grid .doorway { text-align: center; align-items: center; }
   .door-quote {
     font-family: var(--font-serif);
     font-style: italic;
@@ -134,8 +123,9 @@ const doors = [
     color: var(--marigold-600);
     margin-bottom: 0.6rem;
   }
-  .door-card h3 { color: var(--teal-900); margin-bottom: 0.5rem; }
+  .door-grid h3 { color: var(--teal-900); margin-bottom: 0.5rem; }
   .door-desc { flex: 1; margin-bottom: 1rem; }
+  .door-grid .arrow-link { margin-top: auto; }
 
   @media (max-width: 900px) { .door-grid { grid-template-columns: 1fr 1fr; } }
   @media (max-width: 560px) { .door-grid { grid-template-columns: 1fr; } }

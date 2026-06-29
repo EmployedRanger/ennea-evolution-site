@@ -82,14 +82,14 @@ import Base from "../layouts/Base.astro";
       <div class="center" style="margin-bottom:2.75rem;">
         <h2>Two doors</h2>
       </div>
-      <div class="two-col">
-        <div class="door">
+      <div class="two-col doors-2">
+        <div class="doorway">
           <h3>Personal Work</h3>
           <p>Maybe you've been working on this for years. Maybe you just woke up one day and realized something isn't right. Either way, the problem probably isn't what you think it is. And it probably isn't you.</p>
           <p>The parts of your life that feel most frustrating usually aren't random. They were solutions to something. Once you understand what they were solving, change stops feeling like such a struggle.</p>
           <a href="/personal-work" class="arrow-link">Explore Personal Work <span class="arrow">→</span></a>
         </div>
-        <div class="door">
+        <div class="doorway">
           <h3>Professional Work</h3>
           <p>There's no such thing as just business. Every project, every deadline, every difficult conversation runs through a person.</p>
           <p>You've built the operating systems: the processes, the tools, the way the work flows. Every one of them runs on people, on what they assume, what they trust, what they say or don't say to each other. That's the human system underneath the work, and it's the one most companies never actually build. When people feel understood, they stop protecting and start participating, and the work gets easier everywhere at once.</p>
@@ -182,18 +182,9 @@ import Base from "../layouts/Base.astro";
   .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(1.25rem, 3vw, 2rem); }
   .two-col h3 { color: var(--teal-900); }
 
-  /* doors */
-  .door {
-    background: var(--paper);
-    border: 1px solid var(--line);
-    border-top: 4px solid var(--marigold);
-    border-radius: var(--radius-lg);
-    padding: clamp(1.6rem, 3vw, 2.5rem);
-    box-shadow: var(--shadow-sm);
-    display: flex;
-    flex-direction: column;
-  }
-  .door .arrow-link { margin-top: auto; padding-top: 0.5rem; }
+  /* two-doors row: a touch more breathing room between the two doorways */
+  .doors-2 { gap: clamp(1.5rem, 4vw, 3rem); max-width: 860px; margin-inline: auto; }
+  .doorway h3 { color: var(--teal-900); text-align: center; }
 
   /* meet candace */
   .meet-grid {
