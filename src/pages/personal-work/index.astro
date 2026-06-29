@@ -41,7 +41,7 @@ const doors = [
 ];
 ---
 
-<Base title="Personal Work — Ennea Evolution" description="Counseling and coaching for people ready to understand their own lives. Start with the door that sounds most like you.">
+<Base title="Personal Work · Ennea Evolution" description="Counseling and coaching for people ready to understand their own lives. Start with the door that sounds most like you.">
   <section class="page-hero">
     <div class="container">
       <p class="eyebrow">Personal Work</p>
@@ -63,6 +63,7 @@ const doors = [
       <div class="door-grid">
         {doors.map((d) => (
           <a class="doorway" href={d.href}>
+            <span class="door-extras" aria-hidden="true"></span>
             <p class="door-quote">{d.quote}</p>
             <h3>{d.title}</h3>
             <p class="door-desc">{d.desc}</p>
@@ -80,7 +81,7 @@ const doors = [
       <p>At first they look unrelated. Anxiety. A relationship that aches. Self-doubt. Not being able to make a decision. Feeling far from yourself.</p>
       <p>Underneath, they're often the same thing wearing different clothes. Some part of you is protecting something. A belief that once made complete sense is still shaping what you do, even though the situation that created it has changed.</p>
       <p>That's why these struggles are so confusing. The pattern isn't irrational. It makes sense from the inside. And because it makes sense, fighting it usually doesn't work. Understanding it does.</p>
-      <p>Most people already know their patterns. The question was never whether they exist. It's why they make so much sense to a part of you. Once that becomes clear, change gets easier — not because you're forcing yourself, but because you're finally working with yourself instead of against yourself.</p>
+      <p>Most people already know their patterns. The question was never whether they exist. It's why they make so much sense to a part of you. Once that becomes clear, change gets easier, not because you're forcing yourself, but because you're finally working with yourself instead of against yourself.</p>
     </div>
   </section>
 

@@ -1,5 +1,5 @@
 /* ============================================================
-   Ennea Evolution — design system
+   Ennea Evolution, design system
    Brand: teal #155F73 · marigold #EF9C20
    Type:  Fraunces (display serif) · Figtree (sans)
    ============================================================ */
@@ -13,7 +13,7 @@
   --marigold: #ef9c20;
   --marigold-600: #d9860c;
 
-  /* neutrals — warm, paper-like */
+  /* neutrals, warm, paper-like */
   --cream: #fbf7ef;
   --cream-2: #f4ede0;
   --cream-3: #ece2d1;
@@ -201,51 +201,74 @@ em { font-style: italic; }
 /* divider */
 .rule { height: 1px; background: var(--line-strong); border: 0; margin: 0; }
 
-/* ---------- doorway cards (used where the copy says "door") ---------- */
+/* ---------- doorway cards (a literal paneled door) ---------- */
 .doorway {
   position: relative;
   display: flex;
   flex-direction: column;
-  background: linear-gradient(180deg, #fffdf8 0%, var(--paper) 30%);
-  border: 2px solid var(--teal);
-  border-radius: 48% 48% 8px 8px / 16% 16% 3% 3%;
-  padding: clamp(3.25rem, 6vw, 4.5rem) clamp(1.6rem, 3vw, 2.4rem) clamp(1.6rem, 3vw, 2.2rem);
-  box-shadow: var(--shadow-sm);
+  background: linear-gradient(180deg, #fffdf8 0%, var(--paper) 38%);
+  border: 2.5px solid var(--teal);
+  border-radius: 46% 46% 7px 7px / 15% 15% 2% 2%;
+  /* generous top clears the arch; wide bottom holds the lower panel; symmetric sides = stiles */
+  padding: clamp(3rem, 5.5vw, 4rem) clamp(2rem, 3vw, 2.4rem) clamp(3.6rem, 5vw, 4.2rem);
+  /* inner white bevel = the door's inset frame / jamb */
+  box-shadow: var(--shadow-sm), inset 0 0 0 4px #fff, inset 0 0 0 5.5px var(--line);
   color: var(--body);
   transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
 }
-/* inset door panel */
+.doorway > * { position: relative; z-index: 1; }
+.doorway .arrow-link { margin-top: auto; padding-top: 0.6rem; }
+
+/* upper panel — the large raised panel the text sits on */
 .doorway::before {
   content: "";
   position: absolute;
-  inset: 11px;
+  top: 0.95rem; left: 0.95rem; right: 0.95rem; bottom: 3rem;
   border: 1.5px solid var(--line-strong);
-  border-radius: 47% 47% 5px 5px / 15% 15% 2% 2%;
+  border-radius: 44% 44% 5px 5px / 15% 15% 1% 1%;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.9), inset 0 0 18px rgba(14,60,73,0.06);
   pointer-events: none;
   transition: border-color 0.22s ease;
+  z-index: 0;
 }
-/* doorknob */
+/* doorknob with a round backplate, set near the opening edge */
 .doorway::after {
   content: "";
   position: absolute;
-  right: 26px;
-  top: 56%;
-  width: 12px;
-  height: 12px;
+  right: 1.05rem; top: 47%;
+  width: 13px; height: 13px;
   border-radius: 50%;
-  background: var(--marigold);
-  box-shadow: 0 0 0 3px rgba(239, 156, 32, 0.16);
+  background: radial-gradient(circle at 38% 32%, #ffd884 0%, var(--marigold) 55%, var(--marigold-600) 100%);
+  box-shadow: 0 0 0 5px #fff, 0 0 0 6.5px var(--line-strong);
   transition: transform 0.22s ease;
+  z-index: 2;
+}
+/* decorative span carries the lower panel + the hinges */
+.door-extras { position: absolute; inset: 0; pointer-events: none; z-index: 0; }
+.door-extras::before { /* lower panel */
+  content: "";
+  position: absolute;
+  left: 0.95rem; right: 0.95rem; bottom: 0.95rem; height: 1.65rem;
+  border: 1.5px solid var(--line-strong);
+  border-radius: 5px;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.9), inset 0 0 10px rgba(14,60,73,0.06);
+}
+.door-extras::after { /* two hinges on the left stile */
+  content: "";
+  position: absolute;
+  left: 5px; top: 28%;
+  width: 5px; height: 44%;
+  background: repeating-linear-gradient(180deg, var(--teal) 0 16px, transparent 16px 36px);
+  border-radius: 2px;
+  opacity: 0.8;
 }
 .doorway:hover {
   transform: translateY(-5px);
-  box-shadow: var(--shadow-md);
+  box-shadow: var(--shadow-md), inset 0 0 0 4px #fff, inset 0 0 0 5.5px var(--line);
   border-color: var(--teal-900);
 }
 .doorway:hover::before { border-color: var(--marigold); }
-.doorway:hover::after { transform: scale(1.15); }
-.doorway > * { position: relative; }
-.doorway .arrow-link { margin-top: auto; padding-top: 0.6rem; }
+.doorway:hover::after { transform: scale(1.12); }
 
 /* small caps tagline */
 .tagline {
