@@ -1,5 +1,7 @@
 ---
 import Subpage from "../../layouts/Subpage.astro";
+import Figure from "../../components/Figure.astro";
+import StorySnap from "../../components/diagrams/StorySnap.astro";
 ---
 
 <Subpage
@@ -25,6 +27,10 @@ import Subpage from "../../layouts/Subpage.astro";
   <p><em>Why misunderstandings make sense.</em> The first workshop is about the lens you look through. This one is about what happens because of it.</p>
   <p>Most conflict begins long before the conversation. It begins the moment we start filling in the blanks, assigning motives, predicting reactions, becoming certain about things we don't actually know. By the time something looks like a communication problem, it has often been an interpretation problem for a while.</p>
   <p>Participants learn how misunderstandings get created, how stories become certainty, and how to separate behavior from interpretation. Not the general idea that you misread people, but the actual misreading: <em>I thought you were checked out, and you were thinking it through. I thought you were attacking the plan, and you were protecting it.</em></p>
+
+  <Figure max={600} caption="The same few seconds of someone in a meeting. Three stories form before anyone has said a word. Most conflict starts right here.">
+    <StorySnap />
+  </Figure>
   <p>People understand how they misunderstand. And once they do, conflict starts getting prevented instead of repeated. Fewer meetings end in two versions of what was decided. The team spends less energy managing each other and more of it on the work.</p>
 
   <h3>One program, two layers</h3>

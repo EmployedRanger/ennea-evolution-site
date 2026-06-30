@@ -1,0 +1,39 @@
+---
+// A framed container for the inline concept diagrams.
+// Props: caption (optional), max (optional px width), plain (optional: no card frame)
+const { caption, max = 620, plain = false } = Astro.props;
+---
+<figure class={`ee-figure${plain ? " ee-figure--plain" : ""}`} style={`--fig-max:${max}px`}>
+  <div class="ee-figure-art">
+    <slot />
+  </div>
+  {caption && <figcaption>{caption}</figcaption>}
+</figure>
+
+<style>
+  .ee-figure {
+    margin: clamp(2rem, 4vw, 3rem) auto;
+    max-width: var(--fig-max);
+  }
+  .ee-figure-art {
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-lg);
+    padding: clamp(1.4rem, 3.5vw, 2.4rem);
+    box-shadow: var(--shadow-sm);
+  }
+  .ee-figure--plain .ee-figure-art {
+    background: transparent;
+    border: 0;
+    box-shadow: none;
+    padding: 0;
+  }
+  .ee-figure figcaption {
+    margin-top: 0.95rem;
+    text-align: center;
+    font-size: 0.92rem;
+    line-height: 1.5;
+    color: var(--muted);
+    font-style: italic;
+  }
+</style>

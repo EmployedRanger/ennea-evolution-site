@@ -1,5 +1,8 @@
 ---
 import Base from "../layouts/Base.astro";
+import Figure from "../components/Figure.astro";
+import Reframe from "../components/diagrams/Reframe.astro";
+import TheDoor from "../components/diagrams/TheDoor.astro";
 ---
 
 <Base>
@@ -73,6 +76,9 @@ import Base from "../layouts/Base.astro";
         yourself included, confusion starts turning into clarity. And when something finally makes sense, you know what
         to do with it.
       </p>
+      <Figure max={640} caption="One behavior, one fast conclusion, and the questions that crack it back open.">
+        <Reframe />
+      </Figure>
     </div>
   </section>
 
@@ -82,6 +88,9 @@ import Base from "../layouts/Base.astro";
       <div class="center" style="margin-bottom:2.75rem;">
         <h2>Two doors</h2>
       </div>
+      <Figure max={560} plain caption="Every pattern is a door. On the other side is the story it was built to protect.">
+        <TheDoor />
+      </Figure>
       <div class="two-col doors-2">
         <div class="doorway">
           <span class="door-extras" aria-hidden="true"></span>

@@ -282,6 +282,9 @@ em { font-style: italic; }
 
 img { max-width: 100%; display: block; }
 
+/* ---------- inline concept diagrams ---------- */
+.ee-diagram { width: 100%; height: auto; display: block; }
+
 /* reduced motion */
 @media (prefers-reduced-motion: reduce) {
   * { scroll-behavior: auto !important; transition: none !important; }
