@@ -143,8 +143,17 @@ const services = [
   <section class="panel" style="padding-top:0;">
     <div class="container center">
       <h4>Some of the teams I've worked with</h4>
-      <p class="logo-row">Modern Expo · Small Satellite Conference · Plan to Eat · Power Driven Diesel</p>
-      <div style="margin-top:2rem;"><NineDots /></div>
+      <div class="logo-row">
+        <img src="/img/logos/hlo-lighting.png" alt="HLO Lighting" />
+        <img src="/img/logos/m-squared.png" alt="M Squared" />
+        <img src="/img/logos/spot-on.png" alt="Spot On" />
+        <img src="/img/logos/allways.png" alt="Allways" />
+        <img src="/img/logos/pro-green-supply.png" alt="Pro Green Supply" />
+        <img src="/img/logos/total-tree-care.png" alt="Total Tree Care" />
+        <img src="/img/logos/acer-trees.png" alt="Acer Trees Utah" />
+        <img src="/img/logos/lg-collective.png" alt="LG Collective" />
+      </div>
+      <div style="margin-top:2.25rem;"><NineDots /></div>
     </div>
   </section>
 
@@ -159,5 +168,19 @@ const services = [
 </Base>
 
 <style>
-  .logo-row { color: var(--charcoal); opacity: 0.55; font-size: 0.98rem; letter-spacing: 0.04em; }
+  .logo-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: clamp(1.5rem, 4vw, 3rem);
+    margin-top: 2rem;
+  }
+  .logo-row img {
+    height: 40px;
+    width: auto;
+    filter: grayscale(1);
+    opacity: 0.6;
+    mix-blend-mode: multiply;
+  }
 </style>
