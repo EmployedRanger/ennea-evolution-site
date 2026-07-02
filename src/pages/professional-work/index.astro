@@ -1,158 +1,163 @@
 ---
 import Base from "../../layouts/Base.astro";
+import NineDots from "../../components/NineDots.astro";
 
-const offerings = [
+const services = [
   {
-    cat: "Foundation",
-    title: "People Make Sense",
-    desc: "Two workshops that build one shared language for communication, conflict, feedback, and teamwork: Seeing Yourself Clearly and Seeing Others Clearly. Most companies start here.",
-    href: "/professional-work/people-make-sense",
+    cat: "Communication",
+    name: "See People Clearly",
+    body: "A two-part Enneagram workshop. Your team learns themselves first, then each other. Most companies start here.",
+    href: "/professional-work/see-people-clearly",
+    sig: "#006073",
   },
   {
-    cat: "Development",
-    title: "Manage With Meaning",
-    desc: "The core manager workshop. Trust, motivation, accountability, delegation, feedback, and the conversations managers have every day. Employees experience a company through their managers, and that side of the job can be taught.",
+    cat: "Leadership",
+    name: "Manage With Meaning",
+    body: "Practical leadership training. Managers learn to build accountability, coach their people, and give honest feedback.",
     href: "/professional-work/manage-with-meaning",
+    sig: "#9C1B30",
   },
   {
-    cat: "Development",
-    title: "Workshops",
-    desc: "Practical sessions built around what your team is working through: communication, conflict, trust, boundaries, accountability, difficult conversations, and more. Teams leave using the tools the same week.",
-    href: "/professional-work/workshops",
-  },
-  {
-    cat: "Support",
-    title: "Employee Support",
-    desc: "Confidential counseling on retainer, so help is already there when a person needs it, often long before it would reach a manager's desk or a resignation letter. And managers get to stay managers.",
-    href: "/professional-work/employee-counseling-team-repair",
+    cat: "Teams",
+    name: "Team Effectiveness",
+    body: "Not a stock curriculum. Built around what your team is actually working through.",
+    href: "/professional-work/team-effectiveness",
+    sig: "#D57A27",
   },
   {
     cat: "Support",
-    title: "Team Repair",
-    desc: "We find what each side is actually reacting to, clear the misunderstandings, rebuild the working trust, and get the team back to the work. Most personality conflicts turn out to be two reasonable interpretations that never got checked.",
-    href: "/professional-work/employee-counseling-team-repair",
+    name: "Workplace Support",
+    body: "Confidential support, mediation, and facilitated conversations for the people issues that need more than another meeting.",
+    href: "/professional-work/workplace-support",
+    sig: "#2BA1A3",
   },
 ];
 ---
 
-<Base title="Professional Work · Ennea Evolution" description="People-first development for companies: workshops, manager development, employee support, and team repair. The work runs through people.">
-  <section class="page-hero">
-    <div class="container">
-      <p class="eyebrow">Professional Work</p>
-      <h1>The work is never just the work.</h1>
-      <p class="lead">Every deadline, project, handoff, meeting, and difficult conversation runs through a person.</p>
-      <p style="max-width:60ch;">
-        When people understand each other, work moves faster. When they don't, even good systems start creating friction.
-        That's the work I do with companies: helping the people side of the business run as well as the rest of it.
-      </p>
-      <div class="btn-row" style="margin-top:1.75rem;">
-        <a href="/get-started" class="btn btn-teal">Let's Talk</a>
+<Base
+  title="Professional Work · Ennea Evolution"
+  description="Build a team that works well together. Enneagram workshops, manager development, and workplace support. Learning and laughter go together here."
+>
+  <!-- PANEL 1 · white · hero split: copy left, photo right -->
+  <section class="panel">
+    <div class="container split" style="align-items:center;">
+      <div>
+        <p class="eyebrow">Professional Work</p>
+        <h1>Build a team that works <em>well</em> together.</h1>
+        <p class="lead">I bring the Enneagram, and a genuinely different kind of experience, to your team. Learning and laughter go together here, and that's what a day with Ennea Evolution feels like.</p>
+        <a href="/get-started" class="btn" style="margin-top:1rem;">Let's Talk</a>
+      </div>
+      <div class="photo-slot" style="--tint:var(--t1);">
+        <span>Photo: real workshop candid. The room mid-laugh, or Candace teaching with visible energy</span>
       </div>
     </div>
   </section>
 
-  <!-- WHY GOOD PEOPLE MISS -->
-  <section class="section">
-    <div class="container narrow prose">
-      <p class="eyebrow center">Why good people keep missing each other</p>
-      <p>Most teams are full of good people. And even good people miss each other.</p>
-      <p>Two people leave the same meeting with different understandings of what was decided. Feedback gets softened on its way up until it stops saying anything. A talented manager runs the projects well and isn't sure what to do when the problem is a person. A conflict goes quiet, and everyone calls it resolved.</p>
-      <p>None of this means anything is wrong with anyone. It's what happens when humans work together without a shared way of understanding each other. Every company has some version of it. The companies that work on it have a real advantage.</p>
-    </div>
-  </section>
-
-  <!-- PEOPLE FIRST -->
-  <section class="section bg-cream2">
-    <div class="container narrow prose">
-      <h2 class="center" style="margin-top:0;">People first. Performance follows.</h2>
-      <p>When people don't feel understood, they spend energy protecting themselves. They hold back opinions. They soften the truth. They avoid a conversation, or rehearse it for two weeks before having it. None of that shows up on a report, but all of it slows the work down.</p>
-      <p>When people do feel understood, that energy comes back to the work. They speak up sooner, so problems surface while they're small. They take feedback at face value, so it actually changes things. They spend the meeting on the problem instead of on each other.</p>
-      <p class="lead">Understanding people isn't the soft side of business. It's the fast side.</p>
-    </div>
-  </section>
-
-  <!-- HOW WE CAN WORK TOGETHER -->
-  <section class="section">
+  <!-- PANEL 2 · tint #FFF7E7 · quote band -->
+  <section class="panel-tight tint-band" style="--tint:#FFF7E7;">
     <div class="container">
-      <div class="center narrow" style="margin-bottom:2.75rem;">
-        <p class="eyebrow">How we can work together</p>
-        <p>Most companies start with People Make Sense. From there, some develop their managers, some strengthen the everyday skills the work runs on, and some add support for the people carrying it.</p>
+      <blockquote class="pullquote" style="margin-block:1rem;">
+        [ Attendee quote to come ]
+        <cite>Name, role, team size</cite>
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- PANEL 3 · white · narrow aside, thin teal left rule -->
+  <section class="panel">
+    <div class="container narrow">
+      <div class="aside-rule">
+        <h3>About the word "I"</h3>
+        <p style="margin-bottom:0;">You'll see a lot of I on these pages, and I want to say why. This isn't about me. It's about you. I trust that you want something real, so I'm not going to hide behind a corporate we. It's me you're going to get.</p>
       </div>
-      <div class="offer-grid">
-        {offerings.map((o) => (
-          <a class="offer-card" href={o.href}>
-            <p class="offer-cat">{o.cat}</p>
-            <h3>{o.title}</h3>
-            <p class="offer-desc">{o.desc}</p>
-            <span class="arrow-link">Learn more <span class="arrow">→</span></span>
+    </div>
+  </section>
+
+  <!-- PANEL 4 · white · 50/50 split: photo left, copy right -->
+  <section class="panel" style="padding-top:0;">
+    <div class="container split">
+      <div class="photo-slot" style="--tint:var(--t1);">
+        <span>Photo: over-the-shoulder of participants at a table covered in type tiles and cards. Hands, materials, engagement</span>
+      </div>
+      <div>
+        <h3>What you're getting</h3>
+        <p>A workshop with your team engaged in real conversation, real laughter, and people leaning into the ideas they can use right away.</p>
+        <p>This is a training where your team learns why they work the way they do, and why the people around them work completely differently. That's where most misunderstanding starts, and it's where it stops.</p>
+        <blockquote class="pullquote gold-underline" style="margin-block:1.5rem 0;"><span class="uq">Fun in the room. Real change after.</span></blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- PANEL 5 · white -->
+  <section class="panel" style="padding-top:0;">
+    <div class="container narrow">
+      <h3>How it works</h3>
+      <p>I use the Enneagram. It's a personality assessment, and one people love taking, because it finally explains the thing everyone's quietly curious about: why they're the way they are.</p>
+      <p>That's the hook. The depth is what we do with it. On its own, knowing your type is a fun fact. When your team learns this together, they stop guessing about each other and start seeing what's going on: in meetings, in conflict, in the handoffs where things usually break.</p>
+      <p>It's the lens and language a team learns to use with each other. And it's where the name Ennea Evolution comes from.</p>
+      <p><em>Curious about the Enneagram itself? There's a page for that. <a href="/enneagram">The Enneagram →</a></em></p>
+
+      <h3 style="margin-top:2.5rem;">Where it helps</h3>
+      <p>You don't need a crisis to do this. Most teams have friction they've just stopped addressing.</p>
+      <p>Maybe people communicate past each other, or a new manager is learning to lead. Maybe you're heading into change, or two good people just cannot figure each other out.</p>
+      <p>None of it means anything's wrong with anyone. It's what happens when smart people work together without a shared way of understanding each other. This gives them that, and the tools to use it.</p>
+    </div>
+  </section>
+
+  <!-- PANEL 6 · tint #E9F3F1 · card grid, 4 across -->
+  <section class="panel tint-band" style="--tint:#E9F3F1;">
+    <div class="container">
+      <h3 class="center" style="margin-bottom:2.5rem;">How we can work together</h3>
+      <div class="grid-4">
+        {services.map((s) => (
+          <a href={s.href} class="card" style={`--rule:${s.sig};`}>
+            <p class="card-cat">{s.cat}</p>
+            <p class="card-title" style="font-size:1.12rem;">{s.name}</p>
+            <p style="margin-bottom:0;">{s.body}</p>
           </a>
         ))}
-        <div class="offer-card offer-note">
-          <h3>Start where it makes sense</h3>
-          <p class="offer-desc">Some companies start with a single workshop. Some begin with manager development. Some build a shared language across the whole organization. There's no required sequence. Start with the problem you're trying to solve. Everything else can be built from there.</p>
-        </div>
+      </div>
+      <div class="center" style="margin-top:2.5rem;">
+        <h4>Start where it makes sense</h4>
+        <p style="max-width:52ch; margin-inline:auto; margin-bottom:0;">Every company starts somewhere different. Pick the one that fits what you're after. We'll build from there.</p>
       </div>
     </div>
   </section>
 
-  <!-- TWO ROOMS -->
-  <section class="section bg-cream2">
-    <div class="container narrow prose">
-      <p class="eyebrow center">Two rooms, one person</p>
-      <p>My time is split between two rooms: the counseling room and the training room. In one, I help people make sense of themselves. In the other, I help teams make sense of each other.</p>
-      <p>The two feed each other. The counseling work keeps the trainings grounded in how people actually work. The training work keeps the counseling practical. Companies get someone who studies human behavior up close every week and teaches it in a way teams can immediately put to use.</p>
-      <p>My background includes counseling, coaching, mediation, conflict resolution, IFS, and Coherence Therapy.</p>
-      <p class="center" style="margin-top:1.5rem;"><a href="/about" class="arrow-link">More about me <span class="arrow">→</span></a></p>
+  <!-- PANEL 7 · white · 50/50 split: copy left, photo right -->
+  <section class="panel">
+    <div class="container split">
+      <div>
+        <h3>Why me</h3>
+        <p>Half my week is one-on-one with people, up close, under real pressure. So none of this is theory. I watch how people really operate, then bring it into your building.</p>
+        <p>I've taught this in research labs, medical offices, software companies, and event organizations. The setting changes. People don't. Because there's no such thing as just business. There's only life, and a good share of it happens at work, in the company you keep.</p>
+        <p>Teams at Modern Expo, the Small Satellite Conference, Plan to Eat, and Power Driven Diesel have brought this to their organizations.</p>
+      </div>
+      <div class="photo-slot" style="--tint:var(--t1);">
+        <span>Photo: Candace candid, teaching or in conversation, warm and confident</span>
+      </div>
     </div>
   </section>
 
-  <!-- CTA -->
-  <section class="section bg-teal center">
+  <!-- PANEL 8 · white · logo band -->
+  <section class="panel" style="padding-top:0;">
+    <div class="container center">
+      <h4>Some of the teams I've worked with</h4>
+      <p class="logo-row">Modern Expo · Small Satellite Conference · Plan to Eat · Power Driven Diesel</p>
+      <div style="margin-top:2rem;"><NineDots /></div>
+    </div>
+  </section>
+
+  <!-- PANEL 9 · white · centered close -->
+  <section class="panel center" style="padding-top:0;">
     <div class="container narrow">
-      <p class="eyebrow">Bring this to your team</p>
-      <h2>Tell me what's not working.</h2>
-      <p style="color:#cfe0e2; max-width:55ch; margin-inline:auto;">
-        I'll tell you honestly whether I can help and what it would look like, whether that's one workshop or a culture build.
-      </p>
-      <div class="btn-row" style="justify-content:center; margin-top:1.75rem;">
-        <a href="/get-started" class="btn btn-primary">Contact Candace</a>
-      </div>
+      <h3>Bring this to your team</h3>
+      <p>Tell me a little about your team. I'll tell you whether I can help, and what it would look like.</p>
+      <a href="/get-started" class="btn" style="margin-top:0.5rem;">Let's Talk</a>
     </div>
   </section>
 </Base>
 
 <style>
-  .offer-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: clamp(1rem, 2.2vw, 1.5rem);
-  }
-  .offer-card {
-    display: flex;
-    flex-direction: column;
-    background: var(--paper);
-    border: 1px solid var(--line);
-    border-top: 4px solid var(--teal);
-    border-radius: var(--radius-lg);
-    padding: clamp(1.5rem, 2.5vw, 2rem);
-    box-shadow: var(--shadow-sm);
-    color: var(--body);
-    transition: transform 0.18s ease, box-shadow 0.18s ease;
-  }
-  .offer-card[href]:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
-  .offer-cat {
-    font-size: 0.74rem;
-    letter-spacing: 0.16em;
-    text-transform: uppercase;
-    font-weight: 600;
-    color: var(--marigold-600);
-    margin-bottom: 0.6rem;
-  }
-  .offer-card h3 { color: var(--teal-900); margin-bottom: 0.6rem; }
-  .offer-desc { flex: 1; font-size: 0.97rem; margin-bottom: 1rem; }
-  .offer-note { border-top-color: var(--marigold); background: var(--cream); }
-  .offer-note .offer-desc { margin-bottom: 0; }
-
-  @media (max-width: 900px) { .offer-grid { grid-template-columns: 1fr 1fr; } }
-  @media (max-width: 560px) { .offer-grid { grid-template-columns: 1fr; } }
+  .logo-row { color: var(--charcoal); opacity: 0.55; font-size: 0.98rem; letter-spacing: 0.04em; }
 </style>

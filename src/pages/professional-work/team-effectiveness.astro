@@ -1,0 +1,123 @@
+---
+import Base from "../../layouts/Base.astro";
+
+// year-line: four larger dots (workshops) with smaller dots between (clinics), mixed signature colors
+const yearline = [
+  { size: 16, c: "#006073" },
+  { size: 9, c: "#EF9C20" },
+  { size: 9, c: "#56B6B1" },
+  { size: 16, c: "#9C1B30" },
+  { size: 9, c: "#2BA1A3" },
+  { size: 9, c: "#FFC62C" },
+  { size: 16, c: "#D57A27" },
+  { size: 9, c: "#038A96" },
+  { size: 9, c: "#B22B2E" },
+  { size: 16, c: "#006073" },
+];
+---
+
+<Base
+  title="Team Effectiveness · Ennea Evolution"
+  description="Built around the team you actually have. Custom team training: boundaries, coaching, executive coaching, resilience, rebuilding trust, and year-long partnerships."
+>
+  <div style="--accent:#D57A27;">
+    <!-- PANEL 1 · white · hero -->
+    <section class="panel">
+      <div class="container narrow">
+        <p class="eyebrow">Professional Work</p>
+        <h1>Team Effectiveness</h1>
+        <h3 style="margin-bottom:1.25rem;">Built around the team you actually have.</h3>
+        <p>There's no one-size-fits-all team. So there's no one-size-fits-all training.</p>
+        <p>This is the build-your-own part of the work. See People Clearly and Manage With Meaning are set programs. This is everything else. You tell me what your team is actually up against, and we build the training around it. There's an application for almost every need.</p>
+        <a href="/get-started" class="btn" style="margin-top:0.75rem;">Let's Talk</a>
+      </div>
+    </section>
+
+    <!-- PANEL 2 · tint #FCE9CD · quote band -->
+    <section class="panel-tight tint-band" style="--tint:#FCE9CD;">
+      <div class="container">
+        <blockquote class="pullquote" style="margin-block:1rem;">
+          [ Attendee quote to come ]
+          <cite>Name, role, team size</cite>
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- PANEL 3 · white · six offering blocks in a loose two-column grid -->
+    <section class="panel">
+      <div class="container">
+        <h3 class="center" style="margin-bottom:2.5rem;">Some of what we build together</h3>
+        <div class="grid-2 offerings">
+          <div>
+            <p><strong>Boundaries and optimal performance.</strong> Overworked usually means underperforming. A lot of leaders, executives, and project managers are running well past the point of good work and calling it commitment. We find the Goldilocks state, the one where your strongest people do their best work instead of just their most. Smart companies figure this out. Optimal state, optimal results.</p>
+          </div>
+          <div>
+            <p><strong>Coaching that isn't cheerleading.</strong> A leader is a mentor. So who's mentoring the leader? That's where I come in. There's a full workshop on coaching and inspiring a team, and it is not generic cheerleading, which never works on anyone. It's how to actually help people build the path to their own success. Strengths and challenges show up differently for every type, so I tailor it to the real person in front of you, not a stock playbook.</p>
+          </div>
+          <div>
+            <p><strong>Executive coaching.</strong> Sometimes the work is one-on-one, at the top. We look at your presence, how people actually experience you, and the blind spots that are hard to see from the inside. Excellence isn't a personality you're born with. You become excellent through awareness.</p>
+          </div>
+          <div>
+            <p><strong>Resilience.</strong> For teams with hard jobs and harder customers. Stress doesn't look the same on everyone, so the fix can't either. We name what stress actually looks like for each person on your team, by type, and build resilience that fits the human instead of handing everyone the same list of tips.</p>
+          </div>
+          <div>
+            <p><strong>Rebuilding trust.</strong> Trust breaks in patterns, and it rebuilds in steps. When it's taken a hit on a team, "just move past it" doesn't work. There's a systematic way to repair it, and it's a set of skills people can learn.</p>
+          </div>
+          <div>
+            <p><strong>Team training your leaders can run.</strong> Not everything needs an outside trainer in the room. Your leaders can run a lot of it themselves, with plug-and-play meeting starters and short trainings built for exactly this. And when you'd rather I run it, I will.</p>
+          </div>
+        </div>
+        <p class="center" style="margin-top:2rem;">Pick the ones that fit, and leave the rest. That's the point.</p>
+        <blockquote class="pullquote gold-underline center" style="margin-inline:auto; padding-left:0;"><span class="uq">Overworked usually means underperforming.</span></blockquote>
+      </div>
+    </section>
+
+    <!-- PANEL 4 · tint #FCE9CD -->
+    <section class="panel tint-band" style="--tint:#FCE9CD;">
+      <div class="container narrow">
+        <h3>The year-long version</h3>
+        <p>Some companies don't want a workshop. They want a partner.</p>
+        <p>For those, we build out the year together: four workshops across it, with lunch-and-learns in between that work like application clinics. The workshops teach. The clinics are where the ideas get put to work on the situations the team is actually in. Education and application. That's what makes it stick.</p>
+        <p>It's custom by company. Sometimes it's an established company, successful for years, that can feel itself settling into status quo, and this is the jolt of energy and insight that wakes it back up. Sometimes it's a newer company building culture and community, and this is made for exactly that.</p>
+        <p>A partnership can hold more than workshops: a few pieces a year for your company newsletter to keep the language alive, and workplace support shaped to your size, from a regular check-in with each person on a smaller team to a problem-solving session with the managers of a larger one. Customizable, and there when you need it.</p>
+        <p>By the end, the Enneagram is part of how the company talks and works. It's the way you operate, not the workshop you attended.</p>
+        <div class="yearline" aria-hidden="true">
+          {yearline.map((d, i) => (
+            <>
+              {i > 0 && <span class="yl-seg"></span>}
+              <i style={`width:${d.size}px; height:${d.size}px; background:${d.c};`}></i>
+            </>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- PANEL 5 · white -->
+    <section class="panel">
+      <div class="container narrow">
+        <h3>What's possible</h3>
+        <p>Leaders who don't run on empty and have the capacity to lead on purpose. A team that stays steady when the work gets hard, and knows the way back when trust takes a hit. Real, practical skills for the conversations that matter most.</p>
+        <p>And none of it is generic, because your team isn't. The same way the Enneagram finds the one of nine ways that's actually yours, we find the version of this that works for you.</p>
+        <div class="photo-slot" style="--tint:#FCE9CD; margin-top:2rem;">
+          <span>Photo: a working session, close and candid; sleeves up, materials out, real engagement</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- PANEL 6 · white · centered close -->
+    <section class="panel center" style="padding-top:0;">
+      <div class="container narrow">
+        <h3>Bring this to your team</h3>
+        <p>Tell me what your team is up against. I'll tell you what I'd build, and whether it's the right fit.</p>
+        <a href="/get-started" class="btn" style="margin-top:0.5rem;">Let's Talk</a>
+      </div>
+    </section>
+  </div>
+</Base>
+
+<style>
+  .offerings { row-gap: 0.5rem; }
+  .yearline { display: flex; align-items: center; margin-top: 2rem; }
+  .yearline i { border-radius: 50%; flex-shrink: 0; display: block; }
+  .yearline .yl-seg { flex: 1; height: 2px; background: rgba(51, 48, 43, 0.18); }
+</style>

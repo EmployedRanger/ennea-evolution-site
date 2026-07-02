@@ -1,0 +1,7 @@
+# Renamed / retired routes from the previous site structure
+/personal-work/the-distance-between-you    /personal-work/love-and-grief          301
+/professional-work/people-make-sense       /professional-work/see-people-clearly  301
+/professional-work/workshops               /professional-work/team-effectiveness  301
+/professional-work/employee-counseling-team-repair  /professional-work/workplace-support  301
+/downloads                                 /personal-work                         301
+/downloads/*                               /personal-work                         301

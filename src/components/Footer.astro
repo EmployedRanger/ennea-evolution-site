@@ -1,148 +1,68 @@
 ---
-// Site-wide free-download band + footer with crisis line.
+import EnneagramMark from "./EnneagramMark.astro";
+import NineDots from "./NineDots.astro";
 ---
-
-<!-- FREE DOWNLOAD / EMAIL CAPTURE BAND -->
-<section class="capture">
-  <div class="container capture-inner">
-    <div>
-      <p class="eyebrow">Two short reads, free</p>
-      <h2>Want a taste? Take whichever one fits where you are.</h2>
-      <p class="capture-sub">
-        A couple of pieces that do in a few minutes what the whole site is about: help something make sense.
-      </p>
-    </div>
-    <form class="capture-form" name="download" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-      <input type="hidden" name="form-name" value="download" />
-      <p class="hidden-field"><label>Don't fill this out: <input name="bot-field" /></label></p>
-      <label class="visually-hidden" for="cap-email">Email address</label>
-      <input id="cap-email" type="email" name="email" placeholder="Your email address" required />
-      <button type="submit" class="btn btn-primary">Send it to me</button>
-      <p class="capture-fine">No spam. The download arrives by email, that's it.</p>
-    </form>
-  </div>
-</section>
-
-<footer class="site-footer">
-  <div class="container foot-grid">
-    <div class="foot-brand">
-      <img src="/logo/logo-white.png" alt="Ennea Evolution" width="240" height="84" />
-      <p class="foot-tag">Understanding. Then clarity. Then capability.</p>
-      <p class="foot-contact">
-        <a href="mailto:enneaevolution@gmail.com">enneaevolution@gmail.com</a><br />
-        <a href="tel:+14358810193">435-881-0193</a><br />
-        Cache Valley, Utah · and by Zoom
-      </p>
-    </div>
-
-    <div class="foot-col">
-      <h4>Personal Work</h4>
-      <a href="/personal-work">Overview</a>
-      <a href="/personal-work/anxiety-overthinking">Anxiety & Overthinking</a>
-      <a href="/personal-work/stay-or-go">Stay or Go</a>
-      <a href="/personal-work/coming-back-to-yourself">Coming Back to Yourself</a>
-      <a href="/personal-work/confidence-self-worth">Confidence & Self-Worth</a>
-      <a href="/personal-work/the-distance-between-you">The Distance Between You</a>
-      <a href="/personal-work/am-i-the-problem">Am I the Problem?</a>
-    </div>
-
-    <div class="foot-col">
-      <h4>Professional Work</h4>
-      <a href="/professional-work">Overview</a>
-      <a href="/professional-work/people-make-sense">The People Make Sense Program</a>
-      <a href="/professional-work/manage-with-meaning">Manage With Meaning</a>
-      <a href="/professional-work/workshops">Workshops</a>
-      <a href="/professional-work/employee-counseling-team-repair">Employee Counseling & Team Repair</a>
-    </div>
-
-    <div class="foot-col">
-      <h4>More</h4>
-      <a href="/about">About Candace</a>
-      <a href="/get-started">Get Started</a>
-    </div>
-  </div>
-
+<footer class="footer">
   <div class="container">
-    <div class="crisis">
-      If you are in crisis, please call or text <strong>988</strong> (Suicide &amp; Crisis Lifeline) or call
-      <strong>911</strong>. This work is steady, preventative support and coaching. It is not crisis care.
+    <div class="foot-brand">
+      <span class="mark"><EnneagramMark size={40} /></span>
+      <div>
+        <p class="wordmark">Ennea Evolution</p>
+        <p class="thesis">People make sense.</p>
+      </div>
     </div>
-    <div class="legal">
-      <span>© {new Date().getFullYear()} Ennea Evolution. Life evolves and so can we.</span>
-      <span>Counseling &amp; coaching, not licensed therapy.</span>
-    </div>
+
+    <nav class="foot-nav" aria-label="Footer">
+      <a href="/">Home</a>
+      <a href="/personal-work">Personal Work</a>
+      <a href="/professional-work">Professional Work</a>
+      <a href="/enneagram">The Enneagram</a>
+      <a href="/about">About</a>
+      <a href="/get-started">Get Started</a>
+    </nav>
+
+    <p class="contact">
+      <a href="mailto:enneaevolution@gmail.com">enneaevolution@gmail.com</a> · <a href="tel:+14358810193">435-881-0193</a> · Cache Valley, Utah
+    </p>
+
+    <div class="dots"><NineDots /></div>
+
+    <p class="crisis">
+      This website and my services are not crisis care. If you are in crisis or thinking about harming yourself,
+      please reach out right now: call or text 988 to reach the Suicide &amp; Crisis Lifeline, available 24 hours
+      a day, or call 911.
+    </p>
   </div>
 </footer>
 
 <style>
-  /* capture band */
-  .capture { background: var(--cream-2); border-top: 1px solid var(--line); }
-  .capture-inner {
-    padding-block: clamp(2.75rem, 6vw, 4.25rem);
-    display: grid;
-    grid-template-columns: 1.1fr 0.9fr;
-    gap: clamp(1.5rem, 4vw, 3.5rem);
-    align-items: center;
+  .footer {
+    background: var(--teal);
+    color: #ffffff;
+    padding-block: clamp(2.75rem, 6vw, 4.5rem) 2rem;
   }
-  .capture h2 { font-size: clamp(1.6rem, 2.6vw, 2.1rem); margin-bottom: 0.4rem; }
-  .capture-sub { color: var(--body); margin: 0; max-width: 42ch; }
-  .capture-form { display: flex; flex-direction: column; gap: 0.75rem; }
-  .capture-form input[type="email"] {
-    width: 100%;
-    padding: 1rem 1.2rem;
-    border: 1.5px solid var(--line-strong);
-    border-radius: 999px;
-    background: var(--paper);
-    font: inherit;
-    color: var(--ink);
-  }
-  .capture-form input[type="email"]:focus { outline: none; border-color: var(--teal); box-shadow: 0 0 0 3px var(--teal-tint); }
-  .capture-form .btn { justify-content: center; }
-  .capture-fine { font-size: 0.82rem; color: var(--muted); margin: 0.15rem 0 0; }
-  .hidden-field { display: none; }
-  .visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+  .foot-brand { display: flex; align-items: center; gap: 1rem; justify-content: center; margin-bottom: 1.75rem; }
+  .mark { color: #ffffff; opacity: 0.9; flex-shrink: 0; }
+  .wordmark { font-family: var(--serif); font-size: 1.45rem; margin: 0; line-height: 1.2; }
+  .thesis { margin: 0; font-size: 0.95rem; opacity: 0.85; }
 
-  /* footer */
-  .site-footer { background: var(--teal-950); color: #cfe0e2; padding-block: clamp(3rem, 6vw, 4.5rem) 2rem; }
-  .foot-grid {
-    display: grid;
-    grid-template-columns: 1.6fr 1fr 1.1fr 0.8fr;
-    gap: clamp(1.5rem, 3vw, 3rem);
-    padding-bottom: 2.5rem;
-  }
-  .foot-brand img { height: 56px; width: auto; margin-bottom: 1rem; }
-  .foot-tag { font-family: var(--font-serif); font-size: 1.15rem; color: #fff; font-style: italic; margin-bottom: 1.1rem; }
-  .foot-contact { font-size: 0.95rem; line-height: 1.9; color: #aecace; margin: 0; }
-  .foot-contact a { color: #aecace; }
-  .foot-contact a:hover { color: var(--marigold); }
+  .foot-nav { display: flex; flex-wrap: wrap; gap: 0.4rem 1.6rem; justify-content: center; margin-bottom: 1.4rem; }
+  .foot-nav a { color: #ffffff; font-weight: 550; font-size: 0.95rem; }
+  .foot-nav a:hover { color: #ffffff; }
 
-  .foot-col h4 { color: var(--marigold); font-family: var(--font-sans); font-size: 0.78rem; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 600; margin-bottom: 1rem; }
-  .foot-col a { display: block; color: #bdd3d5; font-size: 0.92rem; padding: 0.32rem 0; }
-  .foot-col a:hover { color: #fff; }
+  .contact { text-align: center; font-size: 0.95rem; margin-bottom: 1.6rem; }
+  .contact a { color: #ffffff; }
+
+  .dots { margin-bottom: 1.6rem; }
 
   .crisis {
-    border-top: 1px solid rgba(255,255,255,0.12);
-    padding-top: 1.75rem;
-    font-size: 0.9rem;
-    color: #9fbabd;
-    max-width: 70ch;
-  }
-  .crisis strong { color: var(--marigold); }
-  .legal {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    margin-top: 1.5rem;
-    font-size: 0.82rem;
-    color: #7fa0a3;
-  }
-
-  @media (max-width: 860px) {
-    .capture-inner { grid-template-columns: 1fr; }
-    .foot-grid { grid-template-columns: 1fr 1fr; }
-  }
-  @media (max-width: 520px) {
-    .foot-grid { grid-template-columns: 1fr; }
+    max-width: 62ch;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 0.88rem;
+    font-style: italic;
+    line-height: 1.6;
+    color: #ffffff;
+    opacity: 0.95;
   }
 </style>

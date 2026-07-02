@@ -1,0 +1,122 @@
+---
+import Base from "../layouts/Base.astro";
+import EnneagramMark from "../components/EnneagramMark.astro";
+import NineDots from "../components/NineDots.astro";
+
+// "One person needs..." lines, each with a small dot in a different signature color
+const needs = [
+  { text: "One person needs clarity.", c: "#038A96" },
+  { text: "One needs autonomy.", c: "#9C1B30" },
+  { text: "One needs encouragement.", c: "#D57A27" },
+  { text: "One needs challenge.", c: "#B22B2E" },
+  { text: "One needs the whole plan before they can move.", c: "#2BA1A3" },
+  { text: "One needs room to find their own way there.", c: "#EF9C20" },
+];
+---
+
+<Base
+  title="The Enneagram · Ennea Evolution"
+  description="A practical map for why people do what they do. Not just the behavior you can see. The reason underneath it."
+>
+  <!-- PANEL 1 · white · hero with line-art mark -->
+  <section class="panel">
+    <div class="container split hero">
+      <div>
+        <h1>The Enneagram</h1>
+        <h2 class="sub">A practical map for why people do what they do.</h2>
+        <p class="lead" style="margin-bottom:0.3rem;">Not just the behavior you can see.</p>
+        <p class="lead">The reason underneath it.</p>
+      </div>
+      <div class="mark" aria-hidden="true">
+        <EnneagramMark size={380} />
+      </div>
+    </div>
+    <div class="container" style="margin-top:2.5rem;">
+      <NineDots />
+    </div>
+  </section>
+
+  <!-- PANEL 2 · white -->
+  <section class="panel" style="padding-top:0;">
+    <div class="container narrow">
+      <p>The Enneagram helps us understand what someone is reaching for, what they're protecting, what motivates them, what wears them out, and what helps them grow.</p>
+      <p>That kind of understanding changes things.</p>
+      <p>Because when people start to make sense, we get better at being with them. We communicate more clearly. We lead more thoughtfully. We stop guessing. We get more honest about what is happening without turning everything into a character flaw.</p>
+      <p>And that opens up a lot of possibility.</p>
+    </div>
+  </section>
+
+  <!-- PANEL 3 · tint #E9F3F1 -->
+  <section class="panel tint-band" style="--tint:#E9F3F1;">
+    <div class="container narrow">
+      <h2>Why bring it into a business?</h2>
+      <p>Because people do their best work when they are understood accurately.</p>
+      <ul class="needs">
+        {needs.map((n) => (
+          <li><i style={`background:${n.c}`}></i>{n.text}</li>
+        ))}
+      </ul>
+      <p>When leaders understand those differences, they can lead with more precision.</p>
+      <p>They can give feedback in a way someone can actually receive. They can build trust faster. They can see what motivates each person instead of assuming everyone works the same way they do.</p>
+      <p>That is where teams get stronger.</p>
+      <p>A lot of workplace growth starts with simple accuracy. Someone thinks they are being direct, and someone else experiences it as harsh. Someone thinks they are being flexible, and someone else experiences it as unreliable. Someone thinks they are keeping the peace, and someone else experiences it as avoidance.</p>
+      <p>The Enneagram gives teams language for those patterns.</p>
+      <p>Not so people can excuse themselves.</p>
+      <p style="margin-bottom:0;">So they can understand each other, adjust faster, repair better, and work together with a little more grace and a lot more skill.</p>
+    </div>
+  </section>
+
+  <!-- PANEL 4 · white -->
+  <section class="panel">
+    <div class="container narrow">
+      <h2>Why use it in personal work?</h2>
+      <p>Even the patterns we wish we could change usually started for a reason.</p>
+      <p>The Enneagram helps people see the pattern they keep living from. The one that helped them belong, perform, stay safe, stay independent, stay needed, stay prepared, or stay in control.</p>
+      <p>When someone can say, "Oh. This is why I keep doing that," or "That is what I'm trying so hard to get," the work becomes much more compassionate and much more effective.</p>
+      <p>You're not just trying to force a new behavior over an old pattern. You are understanding the pattern well enough to choose something new.</p>
+      <p>That is where real change starts.</p>
+    </div>
+  </section>
+
+  <!-- PANEL 5 · white · 50/50 split: copy left, quote right -->
+  <section class="panel" style="padding-top:0;">
+    <div class="container split">
+      <div>
+        <h3>How I use it</h3>
+        <p>Not as a box. As a map.</p>
+        <p>Not "you are this type, so this is who you are." More like: this is the pattern, this is what it protects, this is where it helps you, this is where it costs you, this is what happens under stress, and this is what growth asks of you.</p>
+        <p>That's the whole point. Accuracy. You stop guessing. You stop moralizing. You stop calling everything a character flaw, and you start seeing what's really there. And once you can see it, you can work with it.</p>
+      </div>
+      <div>
+        <blockquote class="pullquote" style="margin-block:0;">Not as a box. As a map.</blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- PANEL 6 · statement band · Teal, white text -->
+  <section class="panel statement-band center">
+    <div class="container narrow">
+      <h3>Are we a match?</h3>
+      <p style="max-width:52ch; margin-inline:auto;">Get in touch about bringing the Enneagram to your personal or professional life. I'd love to talk.</p>
+      <a href="/get-started" class="btn btn-outline" style="margin-top:1rem;">Get Started</a>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .hero { align-items: center; }
+  .hero .sub { font-size: clamp(1.4rem, 2.6vw, 1.9rem); margin-bottom: 1.25rem; }
+  .mark { color: var(--teal); display: flex; justify-content: center; }
+
+  .needs { list-style: none; margin: 0 0 1.25rem; padding: 0; }
+  .needs li { position: relative; padding-left: 1.8rem; margin-bottom: 0.55rem; line-height: 1.55; }
+  .needs li i {
+    position: absolute;
+    left: 0;
+    top: 0.5em;
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    display: block;
+  }
+</style>

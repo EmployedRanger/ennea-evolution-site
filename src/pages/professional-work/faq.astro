@@ -1,0 +1,71 @@
+---
+import Base from "../../layouts/Base.astro";
+
+const faqs = [
+  {
+    q: "Where do most companies start?",
+    a: "With See People Clearly, the two-part communication workshop. It builds the shared language everything else uses. But if the pressing need is managers, or a specific situation, we start there. There's no required order.",
+  },
+  {
+    q: "How long is a workshop?",
+    a: "Each workshop runs as a half-day session or as two to three ninety-minute lunch-and-learns. Manager development and custom trainings flex to your schedule the same way.",
+  },
+  {
+    q: "Can we start with just one workshop?",
+    a: "Yes. You'll get real value from a single workshop. The pair is stronger, but one is a real start. It's not a half thing.",
+  },
+  {
+    q: "Does everyone have to share their Enneagram type?",
+    a: "No. Sharing is always each person's choice. What usually happens is people can't wait to talk about it, but that's theirs to decide.",
+  },
+  {
+    q: "What does the team walk away with?",
+    a: "Everyone takes the assessment beforehand and gets their own type packet, so the learning starts specific. Then the keepers: type tiles, communication cards, conflict guides, at-a-glance sheets. The session ends. The language stays.",
+  },
+  {
+    q: "Do you travel? Do you work virtually?",
+    a: "I'm based in Cache Valley, Utah, and travel throughout Utah, Idaho, and parts of Colorado. Lunch-and-learns and all-hands sessions also run well over Zoom.",
+  },
+  {
+    q: "How does pricing work?",
+    a: "It's custom by company, because the work is. After a short conversation about your team and your goals, you get a clear proposal: what we'd do, what your team receives, and what it costs.",
+  },
+  {
+    q: "We've already done a personality assessment with our team. How does this fit?",
+    a: "It builds on it. Most assessments describe behavior. The Enneagram explains the motivation underneath it, which is where communication and conflict actually live. Teams that have done other assessments tend to move faster here, because the self-reflection muscle is already warm.",
+  },
+];
+---
+
+<Base
+  title="Professional Work FAQ · Ennea Evolution"
+  description="The practical questions companies ask, with straight answers: formats, pricing, travel, and what teams walk away with."
+>
+  <!-- PANEL 1 · white · hero -->
+  <section class="panel">
+    <div class="container narrow">
+      <p class="eyebrow">Professional Work</p>
+      <h1>Questions, answered.</h1>
+      <p class="lead">The practical questions companies ask, with straight answers. If yours isn't here, it's a short conversation away.</p>
+    </div>
+  </section>
+
+  <!-- PANEL 2 · white · accordion -->
+  <section class="panel" style="padding-top:0;">
+    <div class="container narrow accordion">
+      {faqs.map((f) => (
+        <details>
+          <summary>{f.q}</summary>
+          <div class="a-body"><p>{f.a}</p></div>
+        </details>
+      ))}
+    </div>
+  </section>
+
+  <!-- PANEL 3 · white · close -->
+  <section class="panel center" style="padding-top:0;">
+    <div class="container narrow">
+      <a href="/get-started" class="btn">Let's Talk</a>
+    </div>
+  </section>
+</Base>

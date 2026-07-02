@@ -1,43 +1,65 @@
 ---
-import Subpage from "../../layouts/Subpage.astro";
-import Figure from "../../components/Figure.astro";
-import Balance from "../../components/diagrams/Balance.astro";
+import Base from "../../layouts/Base.astro";
 ---
 
-<Subpage
-  title="Some decisions can't be made with a list."
-  lead="A marriage. A faith. A career. You know the question by heart, because you've been asking it for years. You could argue either side in your sleep. Some nights you do."
-  metaTitle="Stay or Go · Ennea Evolution"
-  metaDescription="The question has been running your life for years. Making it safe to hear what you actually feel, so the answer can be yours."
-  start="You don't have to know the answer to start. You only have to be tired of the question. Bring it as it is, years old and unresolved. We'll make it safe to hear what you actually feel. Then the answer gets to be yours."
+<Base
+  title="Stay or Go · Ennea Evolution"
+  description="Some decisions can't be made with a list. The deadlock isn't made of facts, and there's a way to move that doesn't require one more list."
 >
-  <p>Here's the strange part: you're not short on information. You've read the books, made the lists, talked it through more times than you can count. And still it comes out even, every time. That's not because there's no answer. It's because the deadlock isn't made of facts.</p>
+  <div style="--accent:#2BA1A3;">
+    <!-- PANEL 1 · white · hero -->
+    <section class="panel">
+      <div class="container narrow">
+        <p class="eyebrow">Personal Work</p>
+        <h1>Some decisions can't be made with a list.</h1>
+        <p class="lead">A marriage. A faith. A career. You know the question by heart because you've been carrying it for years. You could make a case for either side. Some nights, you do.</p>
+        <p>Here's the good news hiding inside that: you're not indecisive. If facts were going to settle this, they would have by now, because you have all the facts. The deadlock isn't made of facts. Which means there's a way to move that doesn't require one more list, and I've helped a lot of people find it.</p>
+      </div>
+    </section>
 
-  <h3>You might recognize this</h3>
-  <ul class="ticklist">
-    <li>You can argue both sides flawlessly. You've had years of practice.</li>
-    <li>Some days the answer feels obvious. It felt obvious yesterday too, in the other direction.</li>
-    <li>You keep waiting for a sign, something big enough to make the decision for you.</li>
-    <li>You read about people who left and people who stayed, looking for yourself in their stories.</li>
-    <li>You've imagined the leaving in detail. You've never once said it out loud.</li>
-    <li>You've gotten very good at not finishing the thought.</li>
-  </ul>
+    <!-- PANEL 2 · tint #CCD8DE -->
+    <section class="panel tint-band" style="--tint:#CCD8DE;">
+      <div class="container narrow">
+        <h3>You might recognize this</h3>
+        <ul class="marklist" style="margin-bottom:0;">
+          <li>You can argue both sides flawlessly. You've had years of practice.</li>
+          <li>Some days the answer feels obvious. It felt obvious yesterday too, in the other direction.</li>
+          <li>You keep waiting for a sign, something big enough to make the decision for you.</li>
+          <li>You've gotten very good at not finishing the thought.</li>
+        </ul>
+      </div>
+    </section>
 
-  <h3>Why the question stays open</h3>
-  <p>If facts were going to settle this, they would have by now. So the deadlock isn't about what you don't know. It's about what staying undecided quietly protects you from.</p>
-  <p>As long as the question stays open, nothing has to be grieved. Nothing is lost yet. Nothing is final, and you're not the one who made it final. The middle is painful, but it's also the one place where you don't have to give anything up. That's not weakness. That's a very human reason to stay exactly where you are, sometimes for years.</p>
-  <p>And here's the part that matters most. The answer usually isn't hiding in a fact you haven't found. What's missing from the process isn't information. It's what you actually feel, the part that rarely gets airtime when a decision is this important. Dropping down into what you feel can be the scariest part of all, so the mind stays up where it's safer, running the arguments again, because thinking feels like progress and feeling feels like a cliff. The work isn't to think harder. It's to make it safe enough to listen to what's underneath the thinking, so the clarity you're looking for can finally come into view.</p>
+    <!-- PANEL 3 · white -->
+    <section class="panel">
+      <div class="container narrow">
+        <h3>Why the question stays open</h3>
+        <p>Staying undecided is protecting you from something. As long as the question stays open, nothing has to be grieved and nothing is final. The middle is painful, but it's the one place you don't have to give anything up.</p>
+        <p>That's not weakness. It's very human. It's also not where you have to live.</p>
+        <p>What's been missing from the process isn't a fact. It's the part of you that rarely gets a vote when a decision matters this much. The mind stays busy running the arguments because thinking feels like progress and feeling feels risky.</p>
 
-  <Figure max={520} caption="No matter how you weigh it, the arguments balance. The thing that would tip it has been sitting underneath the whole time, never placed on the scale.">
-    <Balance />
-  </Figure>
+        <h3 style="margin-top:2.5rem;">What the work is</h3>
+        <p>Nobody can make this decision for you, and you wouldn't trust it if they did. What I can do is help you hear the parts of you the internal arguing has talked over.</p>
+        <p>We let both sides be heard all the way through. Not just the case for staying and the case for going, but what it would feel like to live inside each one. Sometimes the thing you've been afraid to imagine gets less frightening once you follow it all the way to the end.</p>
+        <p>The goal isn't an answer someone hands you. It's your own judgment back, so the choice is truly yours.</p>
+        <div class="photo" style="margin-top:2.25rem;">
+          <img src="/img/open-path.jpg" alt="An open path through a park in warm light" width="960" height="640" loading="lazy" />
+        </div>
 
-  <h3>We finish the thought</h3>
-  <p>There's no answer waiting here that I know and you don't. Nobody can make this decision for you, and you wouldn't trust it if they did. What I can do is help you hear the part of you that's been getting talked over by the arguments. So we let both sides be heard all the way through, the one that wants to stay and the one that wants to go, both yours, both with reasons that deserve daylight.</p>
-  <p>Mostly, we make it safe to feel what you've been working hard not to feel. That's usually where the deadlock has been hiding, not in a missing fact, but in a feeling that seemed too big to let all the way in. So we slow down, and we let it in a little at a time, until you can finish the thought you keep abandoning halfway. What waits at the end is seldom as dangerous as it looked from a distance. And even when it is, there's a steadiness that comes from having finally let yourself know it.</p>
-  <p>What emerges isn't always what you expected. Sometimes you find you want to stay, and staying becomes a real choice for the first time in years instead of a habit. Sometimes you find the leaving has been quietly true for a long while. Either way, the deadlock loosens, not because someone handed you an answer, but because you can finally hear your own.</p>
+        <h3 style="margin-top:2.5rem;">What changes</h3>
+        <p>The question stops running your life. The middle-of-the-night arguing gets quieter, because the conversation finally includes the part of you it was always missing.</p>
+        <blockquote class="pullquote">People who stay, stay differently. People who go, go cleaner.</blockquote>
+        <p>The difference isn't the outcome. It's that you finally trust the one who chose it.</p>
+      </div>
+    </section>
 
-  <h3>What changes</h3>
-  <p>The question stops running your life. The middle-of-the-night arguing goes quiet, because the conversation has finally included the part of you it was always missing.</p>
-  <p>What you get back is bigger than a decision. It's your own judgment, the felt sense of knowing where you stand, which is the thing that actually went missing in all those years of weighing. You stop outsourcing the question to lists and other people and signs, because you can hear yourself again. And whichever way it goes, you move as the person who chose it. People who stay, stay differently. People who go, go cleaner. The difference isn't which door. It's that you finally trust the one who walked through it.</p>
-</Subpage>
+    <!-- PANEL 4 · white · close -->
+    <section class="panel center" style="padding-top:0;">
+      <div class="container narrow">
+        <h3>Start here</h3>
+        <p>You don't have to know the answer. You only have to be tired of the question.</p>
+        <a href="/get-started" class="btn" style="margin-top:0.5rem;">Get Started</a>
+      </div>
+    </section>
+  </div>
+</Base>

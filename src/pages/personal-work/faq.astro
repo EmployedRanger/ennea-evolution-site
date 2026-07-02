@@ -1,0 +1,71 @@
+---
+import Base from "../../layouts/Base.astro";
+
+const faqs = [
+  {
+    q: "Are you a therapist?",
+    a: "I work as a counselor and coach rather than a licensed therapist. That's an intentional choice: it lets me work with clients across state lines and blend depth with practical, real-world application. And I'm careful with the line. If what you're carrying needs clinical care, I'll say so, and I'll help you find it.",
+  },
+  {
+    q: "What does it cost?",
+    a: "Sessions are $125 to $190. I'm private pay, and I don't bill insurance. The first conversation, a fifteen-minute consultation, is free.",
+  },
+  {
+    q: "How do sessions work?",
+    a: "Sessions run fifty minutes to an hour, over Zoom for most clients, or in person in the Cache Valley, Utah area.",
+  },
+  {
+    q: "What happens in the free consultation?",
+    a: "Fifteen minutes, by phone or Zoom. You tell me what's going on. I'll tell you honestly whether I can help, and if I'm not the right fit, I'll point you toward what is. Then you decide. No pressure from me, ever.",
+  },
+  {
+    q: "How long does this usually take?",
+    a: "It depends on what we're working on. Some people come for a handful of sessions around one decision. Some stay for a season of deeper work. We'll talk about it openly as we go, and you're never signed up for more than you want.",
+  },
+  {
+    q: "Do I need to know anything about the Enneagram?",
+    a: "No. Some clients never touch it at all. When it's useful, I'll bring it in and make it easy.",
+  },
+  {
+    q: "Is what I share confidential?",
+    a: "Yes. What you share in our work stays between us, and we'll go over exactly how that works in your intake paperwork.",
+  },
+  {
+    q: "What if I don't know where to start?",
+    a: "“I don't know where to start” is a perfectly good first sentence. Sorting it out together is the actual first step.",
+  },
+];
+---
+
+<Base
+  title="Personal Work FAQ · Ennea Evolution"
+  description="The practical things people usually want to know before they reach out: cost, sessions, confidentiality, and the free consultation."
+>
+  <!-- PANEL 1 · white · hero -->
+  <section class="panel">
+    <div class="container narrow">
+      <p class="eyebrow">Personal Work</p>
+      <h1>Questions, answered.</h1>
+      <p class="lead">The practical things people usually want to know before they reach out. If yours isn't here, just ask. I'm easy to reach.</p>
+    </div>
+  </section>
+
+  <!-- PANEL 2 · white · accordion -->
+  <section class="panel" style="padding-top:0;">
+    <div class="container narrow accordion">
+      {faqs.map((f) => (
+        <details>
+          <summary>{f.q}</summary>
+          <div class="a-body"><p>{f.a}</p></div>
+        </details>
+      ))}
+    </div>
+  </section>
+
+  <!-- PANEL 3 · white · close -->
+  <section class="panel center" style="padding-top:0;">
+    <div class="container narrow">
+      <a href="/get-started" class="btn">Get Started</a>
+    </div>
+  </section>
+</Base>

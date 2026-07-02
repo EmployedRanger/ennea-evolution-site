@@ -4,15 +4,19 @@ const personal = [
   { label: "Stay or Go", href: "/personal-work/stay-or-go" },
   { label: "Coming Back to Yourself", href: "/personal-work/coming-back-to-yourself" },
   { label: "Confidence & Self-Worth", href: "/personal-work/confidence-self-worth" },
-  { label: "The Distance Between You", href: "/personal-work/the-distance-between-you" },
+  { label: "Love & Grief", href: "/personal-work/love-and-grief" },
   { label: "Am I the Problem?", href: "/personal-work/am-i-the-problem" },
+  { label: "FAQ", href: "/personal-work/faq" },
 ];
 const professional = [
-  { label: "The People Make Sense Program", href: "/professional-work/people-make-sense" },
+  { label: "See People Clearly", href: "/professional-work/see-people-clearly" },
   { label: "Manage With Meaning", href: "/professional-work/manage-with-meaning" },
-  { label: "Workshops", href: "/professional-work/workshops" },
-  { label: "Employee Counseling & Team Repair", href: "/professional-work/employee-counseling-team-repair" },
+  { label: "Team Effectiveness", href: "/professional-work/team-effectiveness" },
+  { label: "Workplace Support", href: "/professional-work/workplace-support" },
+  { label: "FAQ", href: "/professional-work/faq" },
 ];
+const path = Astro.url.pathname;
+const active = (p) => (path === p || path.startsWith(p + "/") ? "active" : "");
 ---
 
 <header class="site-header">
@@ -24,22 +28,23 @@ const professional = [
     <nav class="nav" aria-label="Primary">
       <ul class="nav-list">
         <li class="has-menu">
-          <a href="/personal-work" class="nav-link">Personal Work <span class="caret">▾</span></a>
+          <a href="/personal-work" class={`nav-link ${active("/personal-work")}`}>Personal Work <span class="caret">▾</span></a>
           <div class="menu">
             <a href="/personal-work" class="menu-head">Overview</a>
             {personal.map((i) => <a href={i.href}>{i.label}</a>)}
           </div>
         </li>
         <li class="has-menu">
-          <a href="/professional-work" class="nav-link">Professional Work <span class="caret">▾</span></a>
+          <a href="/professional-work" class={`nav-link ${active("/professional-work")}`}>Professional Work <span class="caret">▾</span></a>
           <div class="menu">
             <a href="/professional-work" class="menu-head">Overview</a>
             {professional.map((i) => <a href={i.href}>{i.label}</a>)}
           </div>
         </li>
-        <li><a href="/about" class="nav-link">About</a></li>
+        <li><a href="/enneagram" class={`nav-link ${active("/enneagram")}`}>The Enneagram</a></li>
+        <li><a href="/about" class={`nav-link ${active("/about")}`}>About</a></li>
       </ul>
-      <a href="/get-started" class="btn btn-teal nav-cta">Get Started</a>
+      <a href="/get-started" class="btn nav-cta">Get Started</a>
     </nav>
 
     <button class="burger" aria-label="Open menu" aria-expanded="false" id="burger">
@@ -53,8 +58,9 @@ const professional = [
     {personal.map((i) => <a class="sub" href={i.href}>{i.label}</a>)}
     <a href="/professional-work">Professional Work</a>
     {professional.map((i) => <a class="sub" href={i.href}>{i.label}</a>)}
+    <a href="/enneagram">The Enneagram</a>
     <a href="/about">About</a>
-    <a href="/get-started" class="btn btn-teal" style="margin-top:1rem;">Get Started</a>
+    <a href="/get-started" class="btn" style="margin-top:1rem;">Get Started</a>
   </div>
 </header>
 
@@ -63,7 +69,7 @@ const professional = [
     position: sticky;
     top: 0;
     z-index: 50;
-    background: rgba(251, 247, 239, 0.88);
+    background: rgba(255, 255, 255, 0.92);
     backdrop-filter: saturate(150%) blur(10px);
     border-bottom: 1px solid var(--line);
   }
@@ -72,40 +78,40 @@ const professional = [
     align-items: center;
     justify-content: space-between;
     gap: 1.5rem;
-    min-height: 78px;
+    min-height: 76px;
   }
-  .brand img { height: 50px; width: auto; }
+  .brand img { height: 48px; width: auto; }
 
-  .nav { display: flex; align-items: center; gap: 1.75rem; }
-  .nav-list { display: flex; align-items: center; gap: 1.5rem; list-style: none; margin: 0; padding: 0; }
+  .nav { display: flex; align-items: center; gap: 1.6rem; }
+  .nav-list { display: flex; align-items: center; gap: 1.4rem; list-style: none; margin: 0; padding: 0; }
   .nav-link {
-    font-family: var(--font-sans);
-    font-weight: 500;
-    font-size: 0.98rem;
-    color: var(--ink);
+    font-weight: 550;
+    font-size: 0.97rem;
+    color: var(--charcoal);
     display: inline-flex;
     align-items: center;
     gap: 0.3rem;
     padding: 0.4rem 0;
   }
-  .nav-link:hover { color: var(--teal); }
-  .caret { font-size: 0.7rem; color: var(--marigold-600); }
+  .nav-link:hover { color: var(--teal); text-decoration: none; }
+  .nav-link.active { color: var(--teal); }
+  .caret { font-size: 0.65rem; color: var(--teal); }
 
   .has-menu { position: relative; }
   .menu {
     position: absolute;
-    top: calc(100% + 0.5rem);
+    top: calc(100% + 0.4rem);
     left: 50%;
     transform: translateX(-50%) translateY(6px);
-    min-width: 270px;
-    background: var(--paper);
+    min-width: 260px;
+    background: var(--white);
     border: 1px solid var(--line);
-    border-radius: 14px;
-    box-shadow: var(--shadow-md);
+    border-radius: 12px;
+    box-shadow: var(--shadow);
     padding: 0.5rem;
     opacity: 0;
     visibility: hidden;
-    transition: opacity 0.16s ease, transform 0.16s ease, visibility 0.16s;
+    transition: opacity 0.15s ease, transform 0.15s ease, visibility 0.15s;
   }
   .has-menu:hover .menu,
   .has-menu:focus-within .menu {
@@ -115,30 +121,31 @@ const professional = [
   }
   .menu a {
     display: block;
-    padding: 0.6rem 0.85rem;
-    border-radius: 9px;
+    padding: 0.55rem 0.85rem;
+    border-radius: 8px;
     font-size: 0.95rem;
-    color: var(--body);
+    color: var(--charcoal);
     font-weight: 500;
   }
-  .menu a:hover { background: var(--cream-2); color: var(--teal-900); }
+  .menu a:hover { background: var(--t1); color: var(--teal); text-decoration: none; }
   .menu .menu-head {
-    color: var(--marigold-600);
-    font-size: 0.74rem;
-    letter-spacing: 0.16em;
+    color: var(--teal);
+    font-size: 0.72rem;
+    letter-spacing: 0.18em;
     text-transform: uppercase;
-    font-weight: 600;
+    font-weight: 700;
   }
   .menu .menu-head:hover { background: transparent; }
 
   .burger { display: none; background: none; border: 0; cursor: pointer; padding: 0.5rem; }
-  .burger span { display: block; width: 24px; height: 2px; background: var(--ink); margin: 5px 0; transition: 0.2s; }
+  .burger span { display: block; width: 24px; height: 2px; background: var(--charcoal); margin: 5px 0; }
 
-  .mobile { display: none; flex-direction: column; padding: 0.5rem var(--gutter) 1.5rem; border-top: 1px solid var(--line); background: var(--cream); }
-  .mobile a { padding: 0.7rem 0; color: var(--ink); font-weight: 500; border-bottom: 1px solid var(--line); }
-  .mobile a.sub { padding-left: 1rem; font-weight: 400; color: var(--body); font-size: 0.95rem; }
+  .mobile { display: none; flex-direction: column; padding: 0.5rem clamp(1.25rem, 4vw, 2.5rem) 1.5rem; border-top: 1px solid var(--line); background: var(--white); max-height: calc(100dvh - 76px); overflow-y: auto; }
+  .mobile a { padding: 0.7rem 0; color: var(--charcoal); font-weight: 550; border-bottom: 1px solid var(--line); }
+  .mobile a.sub { padding-left: 1rem; font-weight: 400; font-size: 0.95rem; }
+  .mobile a:hover { text-decoration: none; color: var(--teal); }
 
-  @media (max-width: 940px) {
+  @media (max-width: 980px) {
     .nav { display: none; }
     .burger { display: block; }
     .mobile.open { display: flex; }
