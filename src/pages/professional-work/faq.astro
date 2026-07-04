@@ -3,6 +3,10 @@ import Base from "../../layouts/Base.astro";
 
 const faqs = [
   {
+    q: "Do we need a problem to bring you in?",
+    a: "No. Some companies call because something's stuck. Just as many call because they want to invest in their team and give them a genuinely great day together. A brush up, not an overhaul, and a really fun way to bring good things into how you work.",
+  },
+  {
     q: "Where do most companies start?",
     a: "With See People Clearly, the two-part communication workshop. It builds the shared language everything else uses. But if the pressing need is managers, or a specific situation, we start there. There's no required order.",
   },
@@ -50,8 +54,10 @@ const faqs = [
     </div>
   </section>
 
+  <hr class="hairline-gold" />
+
   <!-- PANEL 2 · white · accordion -->
-  <section class="panel" style="padding-top:0;">
+  <section class="panel">
     <div class="container narrow accordion">
       {faqs.map((f) => (
         <details>
@@ -62,8 +68,10 @@ const faqs = [
     </div>
   </section>
 
+  <hr class="hairline-gold" />
+
   <!-- PANEL 3 · white · close -->
-  <section class="panel center" style="padding-top:0;">
+  <section class="panel center">
     <div class="container narrow">
       <a href="/get-started" class="btn">Let's Talk</a>
     </div>

@@ -10,15 +10,18 @@ import Base from "../layouts/Base.astro";
   <section class="panel">
     <div class="container split" style="align-items:center;">
       <div>
-        <p class="eyebrow">About</p>
+        <p class="eyebrow" style="--accent:var(--teal);">About</p>
         <h1>Hi, I'm Candace.</h1>
-        <p>I came to this work through conflict, professionally speaking. I certified in mediation and spent years assisting attorneys with premediation: couples writing separation contracts, families contesting wills, siblings dividing property or dissolving the family business. Rooms full of people who loved each other and could no longer hear each other.</p>
+        <p>I came to this work through conflict. Professionally speaking.</p>
+        <p>I certified in mediation and spent years assisting attorneys with premediation: couples writing separation contracts, families contesting wills, siblings dividing property or dissolving the family business. Rooms full of people who loved each other and could no longer hear each other.</p>
         <p>Then I found the Enneagram, and those rooms changed. Once I could see why each person's position made sense from the inside, I could help them see it too, and conversations that had been stuck for years started to move. I've been building on that discovery ever since: as a counselor and coach with individuals, and as a trainer with companies and teams.</p>
-        <blockquote class="pullquote">Different rooms, same moment. The moment someone stops being baffling and starts making sense.</blockquote>
+        <blockquote class="pullquote" style="--accent:var(--teal);">Different rooms, same moment. The moment someone stops being baffling and starts making sense.</blockquote>
         <p>And the company work isn't secondhand. My husband and I have started, run, and sold businesses of our own. I'm not bringing theory into someone else's world. I'm back in mine.</p>
       </div>
-      <div class="photo-slot portrait" style="--tint:var(--t1);">
-        <span>Photo: composed portrait of Candace, warm and direct, natural light</span>
+      <div class="photo-block" style="--block:var(--gold);">
+        <div class="photo-slot portrait" style="--tint:#ffffff;">
+          <span>Photo: composed portrait of Candace, warm and direct, natural light</span>
+        </div>
       </div>
     </div>
   </section>
@@ -27,7 +30,7 @@ import Base from "../layouts/Base.astro";
   <section class="panel tint-band" style="--tint:#FFF7E7;">
     <div class="container narrow">
       <h2>What it's like to work with me</h2>
-      <p>I'm warm, and I'm direct, and I've never found those to be in conflict.</p>
+      <p>I'm <span class="mk-underline">warm</span>, and I'm <span class="mk-underline">direct</span>, and I've never found those to be in conflict.</p>
       <p>I will tell you the truth kindly. I won't perform neutrality when I see something clearly, and I won't pretend to see clearly when I don't. I ask real questions, and I can sit with real answers, including the messy ones, especially the messy ones.</p>
       <p>I've never been very interested in deciding whether people are right or wrong. I've always been far more interested in understanding why what they're doing makes so much sense to them. That's where the change is, and it's a calmer, more honest place to work from than judgment ever was.</p>
       <p>And I'm practical. Insight that doesn't change your Tuesday isn't finished yet. Whether I'm working with one person or a leadership team, the work isn't done when it's understood. It's done when it holds.</p>
@@ -43,11 +46,15 @@ import Base from "../layouts/Base.astro";
     </div>
   </section>
 
+  <hr class="hairline-gold" />
+
   <!-- PANEL 4 · white · 50/50 split: photo left, copy right -->
-  <section class="panel" style="padding-top:0;">
+  <section class="panel">
     <div class="container split">
-      <div class="photo-slot" style="--tint:#FFF7E7;">
-        <span>Photo: candid Candace at her actual kitchen table with a mug, easy and unposed</span>
+      <div class="photo-block" style="--block:#FFF7E7;">
+        <div class="photo-slot" style="--tint:#ffffff;">
+          <span>Photo: candid Candace at her actual kitchen table with a mug, easy and unposed</span>
+        </div>
       </div>
       <div>
         <h2>The short version of me</h2>
@@ -57,17 +64,19 @@ import Base from "../layouts/Base.astro";
     </div>
   </section>
 
-  <!-- PANEL 5 · white · two cards -->
+  <hr class="hairline-gold" />
+
+  <!-- PANEL 5 · white · two clickable cards -->
   <section class="panel">
     <div class="container">
       <h2 class="center" style="margin-bottom:2.5rem;">Two ways to work with me</h2>
       <div class="grid-2" style="max-width:860px; margin-inline:auto;">
-        <a href="/personal-work" class="card" style="--rule:#56B6B1;">
+        <a href="/personal-work" class="card washes" style="--rule:#56B6B1; --wash:#E9F3F1;">
           <p class="card-title" style="font-size:1.1rem;">For you</p>
           <p style="margin-bottom:0;">Counseling and coaching for people ready to understand their own lives.</p>
           <span class="card-link">Personal Work →</span>
         </a>
-        <a href="/professional-work" class="card" style="--rule:#006073;">
+        <a href="/professional-work" class="card washes" style="--rule:#006073; --wash:#CCD8DE;">
           <p class="card-title" style="font-size:1.1rem;">For your team</p>
           <p style="margin-bottom:0;">Workshops, manager development, and culture work for companies that know the work runs through people.</p>
           <span class="card-link">Professional Work →</span>

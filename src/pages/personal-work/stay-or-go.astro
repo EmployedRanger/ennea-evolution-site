@@ -17,16 +17,16 @@ import Base from "../../layouts/Base.astro";
       </div>
     </section>
 
-    <!-- PANEL 2 · tint #CCD8DE -->
+    <!-- PANEL 2 · tint #CCD8DE · inner voice -->
     <section class="panel tint-band" style="--tint:#CCD8DE;">
       <div class="container narrow">
         <h3>You might recognize this</h3>
-        <ul class="marklist" style="margin-bottom:0;">
-          <li>You can argue both sides flawlessly. You've had years of practice.</li>
-          <li>Some days the answer feels obvious. It felt obvious yesterday too, in the other direction.</li>
-          <li>You keep waiting for a sign, something big enough to make the decision for you.</li>
-          <li>You've gotten very good at not finishing the thought.</li>
-        </ul>
+        <div class="inner-voice" style="margin-bottom:-1.5rem;">
+          <p>I can argue both sides in my sleep. I've had years of practice.</p>
+          <p>Today the answer feels obvious. It felt obvious yesterday too, the other way.</p>
+          <p>Maybe something will happen that makes the decision for me.</p>
+          <p>I've gotten very good at not finishing the thought.</p>
+        </div>
       </div>
     </section>
 
@@ -42,8 +42,10 @@ import Base from "../../layouts/Base.astro";
         <p>Nobody can make this decision for you, and you wouldn't trust it if they did. What I can do is help you hear the parts of you the internal arguing has talked over.</p>
         <p>We let both sides be heard all the way through. Not just the case for staying and the case for going, but what it would feel like to live inside each one. Sometimes the thing you've been afraid to imagine gets less frightening once you follow it all the way to the end.</p>
         <p>The goal isn't an answer someone hands you. It's your own judgment back, so the choice is truly yours.</p>
-        <div class="photo" style="margin-top:2.25rem;">
-          <img src="/img/open-path.jpg" alt="An open path through a park in warm light" width="960" height="640" loading="lazy" />
+        <div class="photo-block" style="--block:#CCD8DE; margin-top:2.5rem;">
+          <div class="photo">
+            <img src="/img/open-path.jpg" alt="An open path through a park in warm light" width="960" height="640" loading="lazy" />
+          </div>
         </div>
 
         <h3 style="margin-top:2.5rem;">What changes</h3>
@@ -53,8 +55,10 @@ import Base from "../../layouts/Base.astro";
       </div>
     </section>
 
+    <hr class="hairline-gold" />
+
     <!-- PANEL 4 · white · close -->
-    <section class="panel center" style="padding-top:0;">
+    <section class="panel center">
       <div class="container narrow">
         <h3>Start here</h3>
         <p>You don't have to know the answer. You only have to be tired of the question.</p>

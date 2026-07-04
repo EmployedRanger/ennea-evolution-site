@@ -109,14 +109,18 @@ em { font-style: italic; }
   margin: 0 0 1.1rem;
 }
 
-/* ---------- pull quote ---------- */
+/* ---------- pull quote (brightness kit #3) ----------
+   Quote text sets in the page signature color (--accent), short vertical
+   bar of the same color at left. Candace's own lines: roman, no quote
+   marks (default). Testimonials: .testimonial adds italic + attribution.
+   Gold never carries text: use .pullquote-charcoal on gold-signature pages. */
 .pullquote {
   position: relative;
   font-family: var(--serif);
-  font-style: italic;
+  font-style: normal;
   font-size: clamp(1.45rem, 2.8vw, 2.05rem);
   line-height: 1.35;
-  color: var(--charcoal);
+  color: var(--accent);
   max-width: 30ch;
   margin: clamp(2.25rem, 5vw, 3.5rem) auto;
   padding-left: 1.6rem;
@@ -130,6 +134,8 @@ em { font-style: italic; }
   height: 2.1em;
   background: var(--accent);
 }
+.pullquote.testimonial { font-style: italic; }
+.pullquote.pullquote-charcoal { color: var(--charcoal); }
 .pullquote cite {
   display: block;
   font-family: var(--sans);
@@ -140,9 +146,131 @@ em { font-style: italic; }
   margin-top: 0.9rem;
   letter-spacing: 0.02em;
 }
-.pullquote.gold-underline { padding-left: 0; }
-.pullquote.gold-underline::before { display: none; }
-.pullquote.gold-underline .uq { border-bottom: 3px solid var(--gold); padding-bottom: 2px; }
+
+/* ---------- gold hairline (brightness kit #1) ----------
+   A short centered rule between consecutive WHITE panels only. */
+.hairline-gold {
+  width: 80px;
+  height: 1px;
+  background: var(--gold);
+  border: 0;
+  margin: 0 auto;
+}
+
+/* ---------- accent marks (brightness kit #2) ----------
+   Vocabulary of three; only where the copy doc places a [MARK]. */
+.mk-underline {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 8' preserveAspectRatio='none'%3E%3Cpath d='M2 5.5 Q 30 2.5 55 4.5 T 98 3.5' fill='none' stroke='%23EF9C20' stroke-width='2.6' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  background-size: 100% 0.32em;
+  padding-bottom: 0.18em;
+}
+.mk-sweep {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 40' preserveAspectRatio='none'%3E%3Crect x='1' y='6' width='98' height='30' rx='12' fill='%23EF9C20' fill-opacity='0.32'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center 58%;
+  background-size: 103% 0.95em;
+  padding-inline: 0.15em;
+}
+.mk-circle {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 46' preserveAspectRatio='none'%3E%3Cellipse cx='50' cy='23' rx='47' ry='19' fill='none' stroke='%23EF9C20' stroke-width='2.4'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 108% 1.35em;
+  padding-inline: 0.25em;
+}
+
+/* ---------- offset color blocks behind photos (brightness kit #4) ---------- */
+.photo-block {
+  position: relative;
+  margin: 0 1.25rem 1.25rem 0;
+}
+.photo-block::before {
+  content: "";
+  position: absolute;
+  top: 1.25rem;
+  left: 1.25rem;
+  right: -1.25rem;
+  bottom: -1.25rem;
+  background: var(--block, var(--t1));
+  border-radius: var(--radius);
+}
+.photo-block .photo,
+.photo-block .photo-slot { position: relative; }
+
+/* ---------- display half-panel (brightness kit #5) ---------- */
+.display-half { display: grid; grid-template-columns: 1fr 1.15fr; gap: clamp(2rem, 5vw, 4rem); align-items: stretch; }
+.display-half .field {
+  background: var(--field);
+  color: #ffffff;
+  border-radius: var(--radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(2.5rem, 5vw, 4rem) clamp(1.75rem, 3vw, 2.5rem);
+}
+.display-half .field p {
+  font-family: var(--serif);
+  font-size: clamp(2.1rem, 4vw, 3.2rem);
+  line-height: 1.12;
+  margin: 0;
+  max-width: 10ch;
+}
+
+/* ---------- recognition rows (homepage) ---------- */
+.recognition-rows { list-style: none; margin: 0; padding: 0; }
+.recognition-rows li {
+  position: relative;
+  font-family: var(--serif);
+  font-size: clamp(1.08rem, 1.7vw, 1.3rem);
+  line-height: 1.5;
+  padding: 0.85rem 0 0.85rem 1.9rem;
+}
+.recognition-rows li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 1.45em;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--dot, var(--accent));
+}
+
+/* ---------- inner voice (the six door pages) ---------- */
+.inner-voice { position: relative; padding-top: 3.2rem; }
+.inner-voice::before {
+  content: "\201C";
+  position: absolute;
+  top: 0;
+  left: -0.06em;
+  font-family: var(--serif);
+  font-size: 5.5rem;
+  line-height: 1;
+  color: var(--accent);
+}
+.inner-voice p {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: clamp(1.15rem, 1.9vw, 1.42rem);
+  line-height: 1.5;
+  margin: 0 0 1.5rem;
+}
+
+/* ---------- numbered blocks (oversized signature numerals) ---------- */
+.num-block { display: grid; grid-template-columns: auto 1fr; gap: 1.1rem; align-items: baseline; }
+.num-block .num {
+  font-family: var(--serif);
+  font-size: clamp(2.2rem, 3.5vw, 3rem);
+  line-height: 1;
+  color: var(--accent);
+}
+
+/* ---------- sequence dots (sessions across time) ---------- */
+.seq-dots { display: flex; align-items: center; }
+.seq-dots i { border-radius: 50%; flex-shrink: 0; display: block; }
+.seq-dots .seg { flex: 1; height: 2px; background: var(--line); }
 
 /* ---------- buttons ---------- */
 .btn {
@@ -318,9 +446,12 @@ img { max-width: 100%; display: block; }
 }
 @media (max-width: 640px) {
   .split, .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
-  .split .photo, .split .photo-slot { order: -1; } /* photo-then-copy on mobile */
+  .split .photo, .split .photo-block, .split .photo-slot { order: -1; } /* photo-then-copy on mobile */
   .btn { width: 100%; }
   .btn-row { flex-direction: column; }
+  /* display half-panels become full-width short bands above their copy */
+  .display-half { grid-template-columns: 1fr; }
+  .display-half .field { order: -1; padding: 2rem 1.5rem; }
 }
 
 @media (prefers-reduced-motion: reduce) {

@@ -65,12 +65,12 @@ const active = (p) => (path === p || path.startsWith(p + "/") ? "active" : "");
 </header>
 
 <style>
+  /* The nav sits on a pale tint band: the site opens in color the way it closes in color */
   .site-header {
     position: sticky;
     top: 0;
     z-index: 50;
-    background: rgba(255, 255, 255, 0.92);
-    backdrop-filter: saturate(150%) blur(10px);
+    background: #e9f3f1;
     border-bottom: 1px solid var(--line);
   }
   .bar {
@@ -140,7 +140,7 @@ const active = (p) => (path === p || path.startsWith(p + "/") ? "active" : "");
   .burger { display: none; background: none; border: 0; cursor: pointer; padding: 0.5rem; }
   .burger span { display: block; width: 24px; height: 2px; background: var(--charcoal); margin: 5px 0; }
 
-  .mobile { display: none; flex-direction: column; padding: 0.5rem clamp(1.25rem, 4vw, 2.5rem) 1.5rem; border-top: 1px solid var(--line); background: var(--white); max-height: calc(100dvh - 76px); overflow-y: auto; }
+  .mobile { display: none; flex-direction: column; padding: 0.5rem clamp(1.25rem, 4vw, 2.5rem) 1.5rem; border-top: 1px solid var(--line); background: #e9f3f1; max-height: calc(100dvh - 76px); overflow-y: auto; }
   .mobile a { padding: 0.7rem 0; color: var(--charcoal); font-weight: 550; border-bottom: 1px solid var(--line); }
   .mobile a.sub { padding-left: 1rem; font-weight: 400; font-size: 0.95rem; }
   .mobile a:hover { text-decoration: none; color: var(--teal); }

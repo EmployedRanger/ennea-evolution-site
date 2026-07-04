@@ -18,16 +18,16 @@ import Base from "../../layouts/Base.astro";
       </div>
     </section>
 
-    <!-- PANEL 2 · tint #FFF7E7 -->
+    <!-- PANEL 2 · tint #FFF7E7 · inner voice -->
     <section class="panel tint-band" style="--tint:#FFF7E7;">
       <div class="container narrow">
         <h3>You might recognize this</h3>
-        <ul class="marklist" style="margin-bottom:0;">
-          <li>You keep saying "maybe someday" about things that matter to you.</li>
-          <li>You get everything done. It just doesn't always feel like you're all the way there while you're doing it.</li>
-          <li>There's a faint hollow feeling. The closest word might be homesick, except you never left.</li>
-          <li>Wanting more can feel like a betrayal of a perfectly good life, so you keep it to yourself.</li>
-        </ul>
+        <div class="inner-voice" style="margin-bottom:-1.5rem;">
+          <p>Maybe someday. I keep saying that about the things that matter to me.</p>
+          <p>I get everything done. I'm just not sure I'm all the way here while I do it.</p>
+          <p>The closest word is homesick. Except I never left.</p>
+          <p>I have a good life. Wanting more feels ungrateful, so I keep it to myself.</p>
+        </div>
       </div>
     </section>
 
@@ -37,14 +37,16 @@ import Base from "../../layouts/Base.astro";
         <h3>What happened</h3>
         <p>Nothing dramatic. Life happened around you, and you did what each season asked. Kids needed raising. Careers needed building. Bills needed paying. Every time a want of yours collided with a duty, the duty won, and at the time it often had to.</p>
         <p>Postponing yourself doesn't feel painful at first. It feels practical. But the dial isn't selective. Turn down what you want for long enough, and the joy and the color turn down with it.</p>
-        <blockquote class="pullquote">The part of you that feels most like you isn't gone. It's just been waiting for a season that never got scheduled.</blockquote>
+        <blockquote class="pullquote pullquote-charcoal">The part of you that feels most like you isn't gone. It's just been waiting for a season that never got scheduled.</blockquote>
 
         <h3 style="margin-top:2.5rem;">What the work is</h3>
-        <p>We schedule the season.</p>
+        <p><span class="mk-sweep">We schedule the season.</span></p>
         <p>It starts with listening, not overhauling. The wanting got quiet slowly, and it comes back the same way. What sounds good. What feels true. What you want, without immediately explaining why it won't work.</p>
         <p>None of this means tearing down the life you built. You keep every role you have. You just stop being only them.</p>
-        <div class="photo" style="margin-top:2.25rem;">
-          <img src="/img/into-the-light.jpg" alt="A person stepping out into bright morning light" width="960" height="640" loading="lazy" />
+        <div class="photo-block" style="--block:#FFF7E7; margin-top:2.5rem;">
+          <div class="photo">
+            <img src="/img/into-the-light.jpg" alt="A person stepping out into bright morning light" width="960" height="640" loading="lazy" />
+          </div>
         </div>
 
         <h3 style="margin-top:2.5rem;">What changes</h3>
@@ -53,8 +55,10 @@ import Base from "../../layouts/Base.astro";
       </div>
     </section>
 
+    <hr class="hairline-gold" />
+
     <!-- PANEL 4 · white · close -->
-    <section class="panel center" style="padding-top:0;">
+    <section class="panel center">
       <div class="container narrow">
         <h3>Start here</h3>
         <p>You don't have to arrive with answers. Just bring the part of you that wonders if there might be more.</p>

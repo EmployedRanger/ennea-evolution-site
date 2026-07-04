@@ -17,16 +17,16 @@ import Base from "../../layouts/Base.astro";
       </div>
     </section>
 
-    <!-- PANEL 2 · tint #FCE9CD -->
+    <!-- PANEL 2 · tint #FCE9CD · inner voice -->
     <section class="panel tint-band" style="--tint:#FCE9CD;">
       <div class="container narrow">
         <h3>You might recognize this</h3>
-        <ul class="marklist" style="margin-bottom:0;">
-          <li>You leave conversations less sure of yourself than when they started.</li>
-          <li>You apologize to smooth things over, then privately can't work out what you were apologizing for.</li>
-          <li>You've started keeping little proofs for yourself, exact words, moments, details, just to be sure you're not imagining it.</li>
-          <li>You're quieter than you used to be. Smaller. You can feel it, even if you can't explain it.</li>
-        </ul>
+        <div class="inner-voice" style="margin-bottom:-1.5rem;">
+          <p>I walk out of conversations less sure of myself than when I walked in.</p>
+          <p>I apologized to smooth things over. I still don't know what for.</p>
+          <p>I keep little proofs now. Exact words, dates. Just so I know I'm not imagining it.</p>
+          <p>I'm quieter than I used to be. I can feel it.</p>
+        </div>
       </div>
     </section>
 
@@ -40,8 +40,10 @@ import Base from "../../layouts/Base.astro";
         <h3 style="margin-top:2.5rem;">What the work is</h3>
         <p>It starts with one place where your experience doesn't have to defend itself. Not because we decide ahead of time that you're right, but because you can't rebuild self-trust while you're cross-examining yourself.</p>
         <p>So we slow real moments down: what happened, what you felt, what you made of it. The work isn't deciding you're always right. It's learning to hear your own experience without immediately putting it on trial.</p>
-        <div class="photo" style="margin-top:2.25rem;">
-          <img src="/img/journal.jpg" alt="A person journaling with coffee, settled and calm" width="960" height="640" loading="lazy" />
+        <div class="photo-block" style="--block:#FCE9CD; margin-top:2.5rem;">
+          <div class="photo">
+            <img src="/img/journal.jpg" alt="A person journaling with coffee, settled and calm" width="960" height="640" loading="lazy" />
+          </div>
         </div>
 
         <h3 style="margin-top:2.5rem;">What changes</h3>
@@ -51,8 +53,10 @@ import Base from "../../layouts/Base.astro";
       </div>
     </section>
 
+    <hr class="hairline-gold" />
+
     <!-- PANEL 4 · white · close -->
-    <section class="panel center" style="padding-top:0;">
+    <section class="panel center">
       <div class="container narrow">
         <h3>Start here</h3>
         <p>You don't have to be sure of anything. Bring what happened, as you experienced it. Here, it counts.</p>

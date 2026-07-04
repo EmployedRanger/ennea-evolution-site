@@ -1,9 +1,8 @@
 ---
 import Base from "../layouts/Base.astro";
-import EnneagramMark from "../components/EnneagramMark.astro";
 import NineDots from "../components/NineDots.astro";
 
-// "One person needs..." lines, each with a small dot in a different signature color
+// "One person needs..." lines, one dot = one person: the dot grammar at work
 const needs = [
   { text: "One person needs clarity.", c: "#038A96" },
   { text: "One needs autonomy.", c: "#9C1B30" },
@@ -18,7 +17,7 @@ const needs = [
   title="The Enneagram · Ennea Evolution"
   description="A practical map for why people do what they do. Not just the behavior you can see. The reason underneath it."
 >
-  <!-- PANEL 1 · white · hero with line-art mark -->
+  <!-- PANEL 1 · white · hero with brand mark -->
   <section class="panel">
     <div class="container split hero">
       <div>
@@ -28,17 +27,21 @@ const needs = [
         <p class="lead">The reason underneath it.</p>
       </div>
       <div class="mark" aria-hidden="true">
-        <EnneagramMark size={380} />
+        <img src="/img/mark-teal.png" alt="" width="400" height="396" />
       </div>
     </div>
-    <div class="container" style="margin-top:2.5rem;">
-      <NineDots />
+    <div class="container" style="margin-top:2.75rem;">
+      <div class="ninedots-big"><NineDots /></div>
     </div>
   </section>
 
+  <hr class="hairline-gold" />
+
   <!-- PANEL 2 · white -->
-  <section class="panel" style="padding-top:0;">
+  <section class="panel">
     <div class="container narrow">
+      <p>The Enneagram is about people: how we are the same, how we are different, what makes us tick.</p>
+      <p>Most of us go through life understanding the world through our singular point of view. Naturally, we believe the way we think and act is the normal way.</p>
       <p>The Enneagram helps us understand what someone is reaching for, what they're protecting, what motivates them, what wears them out, and what helps them grow.</p>
       <p>That kind of understanding changes things.</p>
       <p>Because when people start to make sense, we get better at being with them. We communicate more clearly. We lead more thoughtfully. We stop guessing. We get more honest about what is happening without turning everything into a character flaw.</p>
@@ -73,13 +76,15 @@ const needs = [
       <p>Even the patterns we wish we could change usually started for a reason.</p>
       <p>The Enneagram helps people see the pattern they keep living from. The one that helped them belong, perform, stay safe, stay independent, stay needed, stay prepared, or stay in control.</p>
       <p>When someone can say, "Oh. This is why I keep doing that," or "That is what I'm trying so hard to get," the work becomes much more compassionate and much more effective.</p>
-      <p>You're not just trying to force a new behavior over an old pattern. You are understanding the pattern well enough to choose something new.</p>
+      <p>You're not just trying to force a new behavior over an old pattern. You come to understand the pattern well enough to choose something new.</p>
       <p>That is where real change starts.</p>
     </div>
   </section>
 
+  <hr class="hairline-gold" />
+
   <!-- PANEL 5 · white · 50/50 split: copy left, quote right -->
-  <section class="panel" style="padding-top:0;">
+  <section class="panel">
     <div class="container split">
       <div>
         <h3>How I use it</h3>
@@ -88,7 +93,7 @@ const needs = [
         <p>That's the whole point. Accuracy. You stop guessing. You stop moralizing. You stop calling everything a character flaw, and you start seeing what's really there. And once you can see it, you can work with it.</p>
       </div>
       <div>
-        <blockquote class="pullquote" style="margin-block:0;">Not as a box. As a map.</blockquote>
+        <blockquote class="pullquote" style="--accent:var(--teal); margin-block:0;">Not as a box. As a map.</blockquote>
       </div>
     </div>
   </section>
@@ -106,7 +111,12 @@ const needs = [
 <style>
   .hero { align-items: center; }
   .hero .sub { font-size: clamp(1.4rem, 2.6vw, 1.9rem); margin-bottom: 1.25rem; }
-  .mark { color: var(--teal); display: flex; justify-content: center; }
+  .mark { display: flex; justify-content: center; }
+  .mark img { max-width: min(400px, 80%); height: auto; }
+
+  /* the nine dots are this page's identity; let them be seen */
+  .ninedots-big :global(.ninedots) { gap: 1rem; }
+  .ninedots-big :global(.ninedots i) { width: 18px; height: 18px; }
 
   .needs { list-style: none; margin: 0 0 1.25rem; padding: 0; }
   .needs li { position: relative; padding-left: 1.8rem; margin-bottom: 0.55rem; line-height: 1.55; }

@@ -9,6 +9,7 @@ const services = [
     body: "A two-part Enneagram workshop. Your team learns themselves first, then each other. Most companies start here.",
     href: "/professional-work/see-people-clearly",
     sig: "#006073",
+    wash: "#AAC1CB",
   },
   {
     cat: "Leadership",
@@ -16,6 +17,7 @@ const services = [
     body: "Practical leadership training. Managers learn to build accountability, coach their people, and give honest feedback.",
     href: "/professional-work/manage-with-meaning",
     sig: "#9C1B30",
+    wash: "#E7B9B0",
   },
   {
     cat: "Teams",
@@ -23,6 +25,7 @@ const services = [
     body: "Not a stock curriculum. Built around what your team is actually working through.",
     href: "/professional-work/team-effectiveness",
     sig: "#D57A27",
+    wash: "#F2D5B3",
   },
   {
     cat: "Support",
@@ -30,7 +33,18 @@ const services = [
     body: "Confidential support, mediation, and facilitated conversations for the people issues that need more than another meeting.",
     href: "/professional-work/workplace-support",
     sig: "#2BA1A3",
+    wash: "#CCD8DE",
   },
+];
+
+// Client logos as one-color Teal marks. South Family Dental and Welch Music
+// have no art files yet; they render as typographic marks until logos land.
+const logos = [
+  { src: "/img/logos/modern-expo-teal.png", alt: "Modern Expo and Events" },
+  { src: "/img/logos/small-satellite-conference-teal.png", alt: "Small Satellite Conference" },
+  { src: "/img/logos/plan-to-eat-teal.png", alt: "Plan to Eat" },
+  { src: "/img/logos/power-driven-diesel-teal.png", alt: "Power Driven Diesel" },
+  { src: "/img/logos/total-tree-care-teal.png", alt: "Total Tree Care" },
 ];
 ---
 
@@ -42,75 +56,43 @@ const services = [
   <section class="panel">
     <div class="container split" style="align-items:center;">
       <div>
-        <p class="eyebrow">Professional Work</p>
-        <h1>Build a team that works <em>well</em> together.</h1>
-        <p class="lead">I bring the Enneagram, and a genuinely different kind of experience, to your team. Learning and laughter go together here, and that's what a day with Ennea Evolution feels like.</p>
+        <p class="eyebrow" style="--accent:var(--teal);">Professional Work</p>
+        <h1>Build a team that works <em class="mk-underline">well</em> together.</h1>
+        <p class="lead">We bring the Enneagram, and a genuinely different kind of experience, to your team. Learning and laughter go together here. That's what a day with Ennea Evolution feels like.</p>
         <a href="/get-started" class="btn" style="margin-top:1rem;">Let's Talk</a>
       </div>
-      <div class="photo-slot" style="--tint:var(--t1);">
-        <span>Photo: real workshop candid. The room mid-laugh, or Candace teaching with visible energy</span>
+      <div class="photo-block" style="--block:var(--gold);">
+        <div class="photo-slot" style="--tint:#ffffff;">
+          <span>Photo: real workshop candid. The room mid-laugh, or Candace teaching with visible energy</span>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- PANEL 2 · tint #FFF7E7 · quote band -->
-  <section class="panel-tight tint-band" style="--tint:#FFF7E7;">
-    <div class="container">
-      <blockquote class="pullquote" style="margin-block:1rem;">
-        [ Attendee quote to come ]
-        <cite>Name, role, team size</cite>
-      </blockquote>
-    </div>
-  </section>
-
-  <!-- PANEL 3 · white · narrow aside, thin teal left rule -->
-  <section class="panel">
-    <div class="container narrow">
-      <div class="aside-rule">
-        <h3>About the word "I"</h3>
-        <p style="margin-bottom:0;">You'll see a lot of I on these pages, and I want to say why. This isn't about me. It's about you. I trust that you want something real, so I'm not going to hide behind a corporate we. It's me you're going to get.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- PANEL 4 · white · 50/50 split: photo left, copy right -->
-  <section class="panel" style="padding-top:0;">
-    <div class="container split">
-      <div class="photo-slot" style="--tint:var(--t1);">
-        <span>Photo: over-the-shoulder of participants at a table covered in type tiles and cards. Hands, materials, engagement</span>
-      </div>
-      <div>
-        <h3>What you're getting</h3>
-        <p>A workshop with your team engaged in real conversation, real laughter, and people leaning into the ideas they can use right away.</p>
-        <p>This is a training where your team learns why they work the way they do, and why the people around them work completely differently. That's where most misunderstanding starts, and it's where it stops.</p>
-        <blockquote class="pullquote gold-underline" style="margin-block:1.5rem 0;"><span class="uq">Fun in the room. Real change after.</span></blockquote>
-      </div>
-    </div>
-  </section>
-
-  <!-- PANEL 5 · white -->
-  <section class="panel" style="padding-top:0;">
-    <div class="container narrow">
-      <h3>How it works</h3>
-      <p>I use the Enneagram. It's a personality assessment, and one people love taking, because it finally explains the thing everyone's quietly curious about: why they're the way they are.</p>
-      <p>That's the hook. The depth is what we do with it. On its own, knowing your type is a fun fact. When your team learns this together, they stop guessing about each other and start seeing what's going on: in meetings, in conflict, in the handoffs where things usually break.</p>
-      <p>It's the lens and language a team learns to use with each other. And it's where the name Ennea Evolution comes from.</p>
-      <p><em>Curious about the Enneagram itself? There's a page for that. <a href="/enneagram">The Enneagram →</a></em></p>
-
-      <h3 style="margin-top:2.5rem;">Where it helps</h3>
-      <p>You don't need a crisis to do this. Most teams have friction they've just stopped addressing.</p>
-      <p>Maybe people communicate past each other, or a new manager is learning to lead. Maybe you're heading into change, or two good people just cannot figure each other out.</p>
-      <p>None of it means anything's wrong with anyone. It's what happens when smart people work together without a shared way of understanding each other. This gives them that, and the tools to use it.</p>
-    </div>
-  </section>
-
-  <!-- PANEL 6 · tint #E9F3F1 · card grid, 4 across -->
+  <!-- PANEL 2 · tint #E9F3F1 · the proof panel: quote plus logos -->
   <section class="panel tint-band" style="--tint:#E9F3F1;">
+    <div class="container">
+      <blockquote class="pullquote testimonial" style="--accent:var(--teal); margin-block:0 2.5rem; max-width:38ch;">
+        "I thought this would be a good team day. I didn't expect it to change the way people talked to each other the next week."
+        <cite>CEO / Owner (draft quote, confirm before launch)</cite>
+      </blockquote>
+      <h4 class="center" style="margin-bottom:1.75rem;">Some of the teams I've worked with</h4>
+      <div class="logo-row">
+        {logos.map((l) => <img src={l.src} alt={l.alt} />)}
+        <span class="logo-text">South Family Dental</span>
+        <span class="logo-text">Welch Music</span>
+      </div>
+      <div style="margin-top:2.5rem;"><NineDots /></div>
+    </div>
+  </section>
+
+  <!-- PANEL 3 · white · clickable card grid, 4 across -->
+  <section class="panel">
     <div class="container">
       <h3 class="center" style="margin-bottom:2.5rem;">How we can work together</h3>
       <div class="grid-4">
         {services.map((s) => (
-          <a href={s.href} class="card" style={`--rule:${s.sig};`}>
+          <a href={s.href} class="card washes" style={`--rule:${s.sig}; --wash:${s.wash};`}>
             <p class="card-cat">{s.cat}</p>
             <p class="card-title" style="font-size:1.12rem;">{s.name}</p>
             <p style="margin-bottom:0;">{s.body}</p>
@@ -124,45 +106,69 @@ const services = [
     </div>
   </section>
 
-  <!-- PANEL 7 · white · 50/50 split: copy left, photo right -->
+  <hr class="hairline-gold" />
+
+  <!-- PANEL 4 · white · copy split: How it works left, Where it helps right -->
+  <section class="panel">
+    <div class="container copy-split">
+      <div>
+        <h3>How it works</h3>
+        <p>I use the Enneagram. It's a personality assessment, and one people love taking, because it finally explains the thing everyone's quietly curious about: why they're the way they are.</p>
+        <p>That's where it starts. The depth is what we do with it. On its own, knowing your type is a fun fact. When your team learns this together, they stop guessing about each other and start seeing what's going on: in meetings, in conflict, in the handoffs where things usually break.</p>
+        <p>It's the lens and language a team learns to use with each other. And it's where the name Ennea Evolution comes from.</p>
+        <p style="margin-bottom:0;"><em>Curious about the Enneagram itself? There's a page for that. <a href="/enneagram">The Enneagram →</a></em></p>
+      </div>
+      <div class="vsep" aria-hidden="true"></div>
+      <div>
+        <h3>Where it helps</h3>
+        <p>You don't need a problem to do this. Some of the best workshop days happen at companies where nothing is wrong: they simply want to invest in their team, hand them a genuinely fun day together, and get better at working with each other. A brush up, not an overhaul.</p>
+        <p style="margin-bottom:0;">And when there is friction, this meets it. Maybe people communicate past each other, or a new manager is learning to lead. Maybe you're heading into change, or two good people just cannot figure each other out. None of it means anything's wrong with anyone. It's what happens when smart people work together without a shared way of understanding each other. This gives them that, and the tools to use it.</p>
+      </div>
+    </div>
+  </section>
+
+  <hr class="hairline-gold" />
+
+  <!-- PANEL 5 · white · 50/50 split: photo left, copy right -->
+  <section class="panel">
+    <div class="container split">
+      <div class="photo-block" style="--block:#E9F3F1;">
+        <div class="photo-slot" style="--tint:#ffffff;">
+          <span>Photo: over-the-shoulder of participants at a table covered in type tiles and cards. Hands, materials, engagement</span>
+        </div>
+      </div>
+      <div>
+        <h3>What you're getting</h3>
+        <p>A workshop with your team engaged in real conversation, real laughter, and people leaning into the ideas they can use right away.</p>
+        <p>This is a training where your team learns why they work the way they do, and why the people around them work completely differently. That's where most misunderstanding starts, and it's where it stops.</p>
+        <blockquote class="pullquote" style="--accent:var(--teal); margin-block:1.5rem 0;">Fun in the room. Real change after.</blockquote>
+      </div>
+    </div>
+  </section>
+
+  <hr class="hairline-gold" />
+
+  <!-- PANEL 6 · white · 50/50 split: copy left, photo right -->
   <section class="panel">
     <div class="container split">
       <div>
         <h3>Why me</h3>
         <p>Half my week is one-on-one with people, up close, under real pressure. So none of this is theory. I watch how people really operate, then bring it into your building.</p>
         <p>I've taught this in research labs, medical offices, software companies, and event organizations. The setting changes. People don't. Because there's no such thing as just business. There's only life, and a good share of it happens at work, in the company you keep.</p>
-        <p>Teams at Modern Expo, the Small Satellite Conference, Plan to Eat, and Power Driven Diesel have brought this to their organizations.</p>
+        <p>Teams at Modern Expo, the Small Satellite Conference, Plan to Eat, Power Driven Diesel, South Family Dental, and Welch Music have brought this to their organizations.</p>
       </div>
-      <div class="photo-slot" style="--tint:var(--t1);">
-        <span>Photo: Candace candid, teaching or in conversation, warm and confident</span>
+      <div class="photo-block" style="--block:#FFF7E7;">
+        <div class="photo-slot" style="--tint:#ffffff;">
+          <span>Photo: Candace candid, teaching or in conversation, warm and confident</span>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- PANEL 8 · white · logo band -->
-  <section class="panel" style="padding-top:0;">
-    <div class="container center">
-      <h4>Some of the teams I've worked with</h4>
-      <div class="logo-row">
-        <img src="/img/logos/modern-expo.png" alt="Modern Expo" />
-        <img src="/img/logos/small-satellite-conference.png" alt="Small Satellite Conference" />
-        <img src="/img/logos/plan-to-eat.png" alt="Plan to Eat" />
-        <img src="/img/logos/power-driven-diesel.png" alt="Power Driven Diesel" />
-        <img src="/img/logos/hlo-lighting.png" alt="HLO Lighting" />
-        <img src="/img/logos/m-squared.png" alt="M Squared" />
-        <img src="/img/logos/spot-on.png" alt="Spot On" />
-        <img src="/img/logos/allways.png" alt="Allways" />
-        <img src="/img/logos/pro-green-supply.png" alt="Pro Green Supply" />
-        <img src="/img/logos/total-tree-care.png" alt="Total Tree Care" />
-        <img src="/img/logos/acer-trees.png" alt="Acer Trees Utah" />
-        <img src="/img/logos/lg-collective.png" alt="LG Collective" />
-      </div>
-      <div style="margin-top:2.25rem;"><NineDots /></div>
-    </div>
-  </section>
+  <hr class="hairline-gold" />
 
-  <!-- PANEL 9 · white · centered close -->
-  <section class="panel center" style="padding-top:0;">
+  <!-- PANEL 7 · white · centered close -->
+  <section class="panel center">
     <div class="container narrow">
       <h3>Bring this to your team</h3>
       <p>Tell me a little about your team. I'll tell you whether I can help, and what it would look like.</p>
@@ -172,19 +178,33 @@ const services = [
 </Base>
 
 <style>
+  /* proof-panel logo row: one-color Teal marks, optically even, one line on desktop */
   .logo-row {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: clamp(1.5rem, 4vw, 3rem);
-    margin-top: 2rem;
+    gap: clamp(1.25rem, 3.2vw, 2.75rem);
   }
-  .logo-row img {
-    height: 40px;
-    width: auto;
-    filter: grayscale(1);
-    opacity: 0.6;
-    mix-blend-mode: multiply;
+  .logo-row img { height: 34px; width: auto; }
+  .logo-text {
+    font-family: var(--serif);
+    color: var(--teal);
+    font-size: 1.05rem;
+    letter-spacing: 0.04em;
+    white-space: nowrap;
+  }
+
+  /* copy split: two copy columns, short vertical gold hairline between */
+  .copy-split {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    gap: clamp(1.75rem, 4vw, 3.5rem);
+    align-items: start;
+  }
+  .copy-split .vsep { width: 1px; background: var(--gold); height: 120px; align-self: center; }
+  @media (max-width: 760px) {
+    .copy-split { grid-template-columns: 1fr; }
+    .copy-split .vsep { width: 80px; height: 1px; justify-self: center; }
   }
 </style>

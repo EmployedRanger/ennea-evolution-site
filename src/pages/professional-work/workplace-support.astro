@@ -23,9 +23,9 @@ import Base from "../../layouts/Base.astro";
     <!-- PANEL 2 · tint #CCD8DE · quote band -->
     <section class="panel-tight tint-band" style="--tint:#CCD8DE;">
       <div class="container">
-        <blockquote class="pullquote" style="margin-block:1rem;">
-          [ Testimonial to come ]
-          <cite>Attributed by role</cite>
+        <blockquote class="pullquote testimonial" style="margin-block:1rem;">
+          "It gave us a way to talk about tension without making it personal."
+          <cite>Executive Team Member (draft quote, confirm before launch)</cite>
         </blockquote>
       </div>
     </section>
@@ -49,14 +49,16 @@ import Base from "../../layouts/Base.astro";
     <!-- PANEL 4 · white · 50/50 split: photo left, copy right -->
     <section class="panel" style="padding-top:0;">
       <div class="container split">
-        <div class="photo-slot" style="--tint:#CCD8DE;">
-          <span>Photo: two chairs by a window, or two people talking in soft light. Quiet, dignified, hopeful</span>
+        <div class="photo-block" style="--block:#CCD8DE;">
+          <div class="photo-slot" style="--tint:#ffffff;">
+            <span>Photo: two chairs by a window, or two people talking in soft light. Quiet, dignified, hopeful</span>
+          </div>
         </div>
         <div>
           <h3>Why it works from the outside</h3>
           <p>Even the best manager is in the middle of it. Even the best HR team sits inside the company. Some situations simply need a neutral outsider, someone with no stake and no reporting line, that people can be honest with in a way they can't always be internally.</p>
-          <p>That is the work I do every day. Half my week is one-on-one with individuals, so a confidential conversation, a mediation, something stuck finally moving. None of this is theory. And because I am outside your building, people tend to say the thing they have been holding back.</p>
-          <blockquote class="pullquote" style="margin-block:1.5rem 0;">That is usually the thing that moves the whole situation.</blockquote>
+          <p>This is the work I already do, every week. Half of my time is spent in confidential one-on-one conversations, helping people work through the things they can't say anywhere else. Bringing that into a workplace isn't a stretch for me. It's the same craft in a different room. And because I come from outside your company, people tend to tell me the thing they've been holding back.</p>
+          <blockquote class="pullquote" style="margin-block:1.5rem 0;">That's usually the thing that moves the whole situation.</blockquote>
         </div>
       </div>
     </section>
@@ -73,8 +75,10 @@ import Base from "../../layouts/Base.astro";
       </div>
     </section>
 
+    <hr class="hairline-gold" />
+
     <!-- PANEL 6 · white · centered close -->
-    <section class="panel center" style="padding-top:0;">
+    <section class="panel center">
       <div class="container narrow">
         <h3>Let's talk it through</h3>
         <p>Tell me what's going on. I'll tell you whether I can help, and what it would look like.</p>

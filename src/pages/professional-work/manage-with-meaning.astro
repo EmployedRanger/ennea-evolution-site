@@ -1,5 +1,28 @@
 ---
 import Base from "../../layouts/Base.astro";
+
+const skills = [
+  {
+    n: "01",
+    t: "Feedback.",
+    b: "Managers learn feedback for real: how to read who's walking into their office, what that person needs from them, and how to deliver the heart of the message clearly. Praise, correction, concern, direction. The point is the same: say what needs to be said in a way the person can use.",
+  },
+  {
+    n: "02",
+    t: "Accountability.",
+    b: "How to hold a standard without making the conversation harder than it needs to be. Some people need direct clarity, some need context, some need room for choice. The standard stays the same. The way a manager helps someone meet it gets more skillful.",
+  },
+  {
+    n: "03",
+    t: "Delegation.",
+    b: "Handing off work clearly: the outcome, the context, the authority, the check-in points. Then applying it to the actual person being managed, so the task doesn't just get assigned. It gets owned. Matching the task to the talent, and doing it well.",
+  },
+  {
+    n: "04",
+    t: "Coaching.",
+    b: "Developing people without taking over for them: asking better questions, naming what they see, helping someone build capacity instead of just finishing the next task. And as always, tools that make it real.",
+  },
+];
 ---
 
 <Base
@@ -21,8 +44,10 @@ import Base from "../../layouts/Base.astro";
           <p>It takes a manager who's good at the job and makes them good with their team.</p>
           <a href="/get-started" class="btn" style="margin-top:0.75rem;">Let's Talk</a>
         </div>
-        <div class="photo-slot" style="--tint:#F2CFC5;">
-          <span>Photo: two people in a real one-on-one conversation, natural light, engaged and at ease</span>
+        <div class="photo-block" style="--block:#F2CFC5;">
+          <div class="photo-slot" style="--tint:#ffffff;">
+            <span>Photo: two people in a real one-on-one conversation, natural light, engaged and at ease</span>
+          </div>
         </div>
       </div>
     </section>
@@ -30,8 +55,8 @@ import Base from "../../layouts/Base.astro";
     <!-- PANEL 2 · tint #F2CFC5 · quote band -->
     <section class="panel-tight tint-band" style="--tint:#F2CFC5;">
       <div class="container">
-        <blockquote class="pullquote" style="margin-block:1rem; max-width:40ch; font-size:clamp(1.3rem, 2.4vw, 1.75rem);">
-          This made managing feel less like guessing. I'm using the materials with my own direct reports now, and we're creating a real team that's invested in everyone succeeding.
+        <blockquote class="pullquote testimonial" style="margin-block:1rem; max-width:40ch; font-size:clamp(1.3rem, 2.4vw, 1.75rem);">
+          "This made managing feel less like guessing. I'm using the materials with my own direct reports now, and we're creating a real team that's invested in everyone succeeding."
           <cite>New Manager</cite>
         </blockquote>
       </div>
@@ -50,53 +75,70 @@ import Base from "../../layouts/Base.astro";
       </div>
     </section>
 
-    <!-- PANEL 4 · white · four skill blocks, small #9C1B30 markers -->
-    <section class="panel" style="padding-top:0;">
+    <hr class="hairline-gold" />
+
+    <!-- PANEL 4 · white · four numbered skill blocks, oversized numerals 01 to 04 -->
+    <section class="panel">
       <div class="container narrow">
         <h2>How we do it</h2>
         <p>It starts with self-awareness.</p>
         <p>Managers learn their own leadership style, where it helps, where it gets in the way, and what people may be experiencing from them that they don't mean to send.</p>
         <p>Then we move into the skills managers use every day.</p>
-        <ul class="marklist" style="margin-top:1.5rem;">
-          <li><strong>Feedback.</strong> Managers learn feedback for real: how to read who's walking into their office, what that person needs from them, and how to deliver the heart of the message clearly. Praise, correction, concern, direction. The point is the same: say what needs to be said in a way the person can use.</li>
-          <li><strong>Accountability.</strong> How to hold a standard without making the conversation harder than it needs to be. Some people need direct clarity, some need context, some need room for choice. The standard stays the same. The way a manager helps someone meet it gets more skillful.</li>
-          <li><strong>Delegation.</strong> Handing off work clearly: the outcome, the context, the authority, the check-in points. Then applying it to the actual person being managed, so the task doesn't just get assigned. It gets owned. Matching the task to the talent, and doing it well.</li>
-          <li><strong>Coaching.</strong> Developing people without taking over for them: asking better questions, naming what they see, helping someone build capacity instead of just finishing the next task. And as always, tools that make it real.</li>
-        </ul>
-        <p>Then the training flexes to your team.</p>
+        <div class="skills">
+          {skills.map((s) => (
+            <div class="num-block" style="margin-top:1.9rem;">
+              <span class="num">{s.n}</span>
+              <p style="margin-bottom:0;"><strong>{s.t}</strong> {s.b}</p>
+            </div>
+          ))}
+        </div>
+        <p style="margin-top:2rem;">Then the training flexes to your team.</p>
         <p>If the real issue is conflict, we work on hard conversations. If trust has taken a hit, we work on how trust gets built and repaired. If your managers are exhausted, we work on the difference between supporting people and carrying them.</p>
+        <blockquote class="pullquote testimonial">
+          "It made feedback easier. Not easy, but easier, because we finally had words that didn't feel like an attack."
+          <cite>Team Lead (draft quote, confirm before launch)</cite>
+        </blockquote>
       </div>
     </section>
 
-    <!-- PANEL 5 · tint #F2CFC5 -->
-    <section class="panel tint-band" style="--tint:#F2CFC5;">
-      <div class="container narrow">
-        <h2>Tools they keep</h2>
-        <p>Managers don't leave with a binder they'll never open.</p>
-        <p>They leave with practical tools for the moments they usually have to improvise.</p>
-        <p>Pocket phrases for familiar conversations. Success scripts that bring a project or conversation back on track. A one-on-one tool that helps them prepare for the person in front of them, not just the topic on the agenda.</p>
-        <p>Because this part of managing is hard.</p>
-        <p>The point is to make it easier to do well, in a real conversation with a real person.</p>
-        <div class="photo-slot" style="--tint:#ffffff; margin-top:2rem;">
-          <span>Photo: flat-lay of the manager tools and cards on white, or a manager's desk with the one-on-one tool in use</span>
+    <!-- PANEL 5 · display half-panel + copy · color field #9C1B30 -->
+    <section class="panel">
+      <div class="container display-half">
+        <div class="field" style="--field:#9C1B30;">
+          <p>Tools They Keep</p>
+        </div>
+        <div>
+          <h2>Tools they keep</h2>
+          <p>Managers don't leave with a binder they'll never open.</p>
+          <p>They leave with practical tools for the moments they usually have to improvise.</p>
+          <p>Pocket phrases for familiar conversations. Success scripts that bring a project or conversation back on track. A one-on-one tool that helps them prepare for the person in front of them, not just the topic on the agenda.</p>
+          <p>Because this part of managing is hard.</p>
+          <p>The point is to make it easier to do well, in a real conversation with a real person.</p>
+          <div class="photo-block" style="--block:#F2CFC5; margin-top:2.25rem;">
+            <div class="photo-slot" style="--tint:#ffffff;">
+              <span>Photo: flat-lay of the manager tools and cards on white, or a manager's desk with the one-on-one tool in use</span>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- PANEL 6 · white -->
-    <section class="panel">
+    <section class="panel" style="padding-top:0;">
       <div class="container narrow">
         <h2>What's possible</h2>
         <p>Managing stops feeling like herding cats and starts feeling like leading people you understand.</p>
         <p>Your managers know what to say, how to say it, and where to focus when the conversation matters.</p>
         <p>Their people bring things up sooner. Feedback lands cleaner. Accountability feels clearer. Delegation works better because the handoff is better.</p>
         <p>And managers stop trying to carry everything themselves, because they know how to give people what they need without giving away everything they have.</p>
-        <p>The company gets the results it needs through people, not at their expense.</p>
+        <blockquote class="pullquote">The company gets the results it needs through people, not at their expense.</blockquote>
       </div>
     </section>
 
+    <hr class="hairline-gold" />
+
     <!-- PANEL 7 · white · centered close -->
-    <section class="panel center" style="padding-top:0;">
+    <section class="panel center">
       <div class="container narrow">
         <h2>Bring this to your managers</h2>
         <p>Tell me what your managers are running into.</p>

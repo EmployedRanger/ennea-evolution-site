@@ -17,16 +17,16 @@ import Base from "../../layouts/Base.astro";
       </div>
     </section>
 
-    <!-- PANEL 2 · tint #FEECE6 -->
+    <!-- PANEL 2 · tint #FEECE6 · inner voice -->
     <section class="panel tint-band" style="--tint:#FEECE6;">
       <div class="container narrow">
         <h3>You might recognize this</h3>
-        <ul class="marklist" style="margin-bottom:0;">
-          <li>You're fine, and then a song, a smell, an ordinary Tuesday, and you're not.</li>
-          <li>People ask how you're doing, and you say okay, because the real answer takes longer than most people can stay.</li>
-          <li>You catch yourself reaching for the phone to tell them something.</li>
-          <li>Part of you worries that feeling better means leaving them behind.</li>
-        </ul>
+        <div class="inner-voice" style="margin-bottom:-1.5rem;">
+          <p>I was fine. Then a song, a smell, an ordinary Tuesday, and I wasn't.</p>
+          <p>I say I'm okay, because the real answer takes longer than anyone can stay.</p>
+          <p>I still reach for my phone to tell them things.</p>
+          <p>If it stops hurting, does that mean I'm leaving them behind?</p>
+        </div>
       </div>
     </section>
 
@@ -41,8 +41,10 @@ import Base from "../../layouts/Base.astro";
         <h3 style="margin-top:2.5rem;">What the work is</h3>
         <p>There's no getting over, and I won't ask you to. The work is making room: for the sadness and the ordinary days, for the missing and the living, both at once. We untangle the love from the pain, so you can keep one without being run by the other.</p>
         <p>If the person is gone, we work on carrying them with you instead of only aching after them. If the person is living, we work on your side of the distance, which is the only side you can do anything with, and it's enough to change things. And if you're grieving what never got to be, we give it the honest goodbye it never got.</p>
-        <div class="photo-slot" style="--tint:#FEECE6; margin-top:2.25rem;">
-          <span>Photo: two mugs on a kitchen table in soft light, or a hand resting on a well-worn photo album. Tender, dignified, warm</span>
+        <div class="photo-block" style="--block:#FEECE6; margin-top:2.5rem;">
+          <div class="photo-slot" style="--tint:#ffffff;">
+            <span>Photo: two mugs on a kitchen table in soft light, or a hand resting on a well-worn photo album. Tender, dignified, warm</span>
+          </div>
         </div>
 
         <h3 style="margin-top:2.5rem;">What changes</h3>
@@ -51,8 +53,10 @@ import Base from "../../layouts/Base.astro";
       </div>
     </section>
 
+    <hr class="hairline-gold" />
+
     <!-- PANEL 4 · white · close -->
-    <section class="panel center" style="padding-top:0;">
+    <section class="panel center">
       <div class="container narrow">
         <h3>Start here</h3>
         <p>Bring the grief exactly as it is: messy, complicated, brand new or years old. There's no wrong version, and there's no deadline.</p>

@@ -70,8 +70,10 @@ const doors = [
     </div>
   </section>
 
-  <!-- PANEL 2 · white · intro line + card grid, 3 x 2 -->
-  <section class="panel" style="padding-top:0;">
+  <hr class="hairline-gold" />
+
+  <!-- PANEL 2 · white · intro line + clickable card grid, 3 x 2 -->
+  <section class="panel">
     <div class="container">
       <h4 class="center" style="max-width:52ch; margin:0 auto 2.5rem;">
         These aren't categories. They're doorways. Start with the one that sounds like your life.
@@ -86,29 +88,37 @@ const doors = [
           </a>
         ))}
       </div>
-      <p class="narrow" style="margin-top:2.75rem; text-align:center;">
-        You don't have to choose the perfect door. They all open into the same room, and I'll meet you there. We'll
-        start with whatever is loudest today and follow it wherever it leads.
-      </p>
     </div>
   </section>
 
-  <!-- PANEL 3 · tint #FFF7E7 · single column -->
+  <hr class="hairline-gold" />
+
+  <!-- PANEL 3 · white · centered standalone line -->
+  <section class="panel center">
+    <div class="container narrow">
+      <blockquote class="pullquote" style="--accent:var(--teal); margin-inline:auto;">
+        You don't have to choose the perfect door. They all open into the same room, and I'll meet you there.
+      </blockquote>
+      <p style="margin-bottom:0;">We'll start with whatever is loudest today and follow it wherever it leads.</p>
+    </div>
+  </section>
+
+  <!-- PANEL 4 · tint #FFF7E7 · single column -->
   <section class="panel tint-band" style="--tint:#FFF7E7;">
     <div class="container narrow">
       <h3>You get yourself back.</h3>
       <p>Most people come in wanting relief from the anxiety, the relationship, the decision, the self-doubt. What they usually get back is themselves.</p>
       <p>You stop arguing with yourself. You stop treating every decision like a verdict on your worth. You stop carrying relationships alone. You begin responding to what's actually happening, instead of what fear has convinced you is true.</p>
       <p>Life starts making sense in a way it never quite has before.</p>
-      <blockquote class="pullquote">
-        Everything makes sense now. I know what to do. And I feel capable of doing it.
+      <blockquote class="pullquote testimonial" style="--accent:var(--teal);">
+        "Everything makes sense now. I know what to do. And I feel capable of doing it."
         <cite>A client</cite>
       </blockquote>
       <p>That's the moment we're after.</p>
     </div>
   </section>
 
-  <!-- PANEL 4 · white · 50/50 split: copy left, photo right -->
+  <!-- PANEL 5 · white · 50/50 split: copy left, photo right -->
   <section class="panel">
     <div class="container split">
       <div>
@@ -118,8 +128,10 @@ const doors = [
         <p style="margin-bottom:0.2rem;"><strong>Two short reads, freely offered</strong></p>
         <p style="margin-bottom:0;">A few minutes each. A small taste of the work.</p>
       </div>
-      <div class="photo">
-        <img src="/img/quiet-kitchen.jpg" alt="A warm kitchen table in real morning window light" width="960" height="640" loading="lazy" />
+      <div class="photo-block" style="--block:#FFF7E7;">
+        <div class="photo">
+          <img src="/img/quiet-kitchen.jpg" alt="A warm kitchen table in real morning window light" width="960" height="640" loading="lazy" />
+        </div>
       </div>
     </div>
   </section>
