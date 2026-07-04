@@ -12,7 +12,7 @@
 
   /* brand anchors */
   --teal: #006073;
-  --teal-dark: #004b5a;
+  --teal-hover: #038a96; /* hover shift stays inside the palette (Type 8 signature) */
   --gold: #ef9c20;
 
   /* per-type palette — tints (backgrounds) and signatures (accents)
@@ -28,7 +28,7 @@
   --t7: #f2d5b3; --s7: #d57a27;
 
   /* structure */
-  --line: #e8e5df;
+  --line: rgba(51, 48, 43, 0.16); /* charcoal hairline, keeps rules inside the palette */
   --maxw: 1140px;
   --measure: 68ch;
   --radius: 10px;
@@ -75,7 +75,7 @@ p { margin: 0 0 1.15rem; }
 .lead { font-size: clamp(1.15rem, 1.8vw, 1.35rem); line-height: 1.6; }
 
 a { color: var(--teal); text-decoration: none; }
-a:hover, a:focus-visible { color: var(--teal-dark); text-decoration: underline; text-underline-offset: 3px; }
+a:hover, a:focus-visible { color: var(--teal-hover); text-decoration: underline; text-underline-offset: 3px; }
 
 strong { font-weight: 650; }
 em { font-style: italic; }
@@ -290,7 +290,7 @@ em { font-style: italic; }
   cursor: pointer;
   transition: background 0.16s ease, color 0.16s ease, border-color 0.16s ease;
 }
-.btn:hover, .btn:focus-visible { background: var(--teal-dark); border-color: var(--teal-dark); color: #ffffff; text-decoration: none; }
+.btn:hover, .btn:focus-visible { background: var(--teal-hover); border-color: var(--teal-hover); color: #ffffff; text-decoration: none; }
 
 .btn-outline { background: transparent; color: var(--teal); border-color: var(--teal); }
 .btn-outline:hover, .btn-outline:focus-visible { background: var(--teal); color: #ffffff; }
