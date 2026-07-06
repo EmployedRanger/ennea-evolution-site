@@ -3,7 +3,7 @@ import Base from "../layouts/Base.astro";
 ---
 
 <Base>
-  <!-- PANEL 1 · white · hero split: copy left, photo right -->
+  <!-- PANEL 1 · white · hero split (copy + photo) with the two doors below, in place of buttons -->
   <section class="panel">
     <div class="container split hero-split">
       <div>
@@ -13,15 +13,27 @@ import Base from "../layouts/Base.astro";
           Whether you're trying to change your own life or help a team work better together, it starts in the same
           place: not with trying harder, but with understanding why the hard thing keeps happening.
         </p>
-        <div class="btn-row" style="margin-top:1.75rem;">
-          <a href="/personal-work" class="btn">Start Personal Work</a>
-          <a href="/professional-work" class="btn btn-outline">Bring This to Your Team</a>
-        </div>
       </div>
       <div class="photo-block" style="--block:var(--gold);">
-        <div class="photo-slot portrait" style="--tint:#ffffff;">
-          <span>Photo: Candace, composed portrait, natural light, one teal or gold element in frame</span>
+        <div class="photo">
+          <img src="/img/home-hero-selfie.jpg" alt="A group of friends laughing together outdoors" width="1600" height="900" />
         </div>
+      </div>
+    </div>
+
+    <!-- the two doors, in place of the hero buttons: step straight into either side -->
+    <div class="container hero-doors">
+      <div class="grid-2" style="max-width:940px; margin-inline:auto;">
+        <a href="/personal-work" class="card washes" style="--rule:#56B6B1; --wash:#E9F3F1;">
+          <h3>Personal Work</h3>
+          <p>Maybe you've been working on this for years. Maybe you woke up one day and realized something isn't right. Either way, the problem probably isn't what you think it is. And it probably isn't you.</p>
+          <span class="card-link" style="--rule:#56B6B1;">Explore Personal Work →</span>
+        </a>
+        <a href="/professional-work" class="card washes" style="--rule:#006073; --wash:#CCD8DE;">
+          <h3>Professional Work</h3>
+          <p>Organizations don't struggle because they lack smart people. They struggle because smart people keep misunderstanding each other. When people finally make sense, communication, leadership, and performance all change.</p>
+          <span class="card-link" style="--rule:#006073;">Bring This to Your Team →</span>
+        </a>
       </div>
     </div>
   </section>
@@ -67,27 +79,7 @@ import Base from "../layouts/Base.astro";
     </div>
   </section>
 
-  <!-- PANEL 4 · white · two large clickable cards side by side -->
-  <section class="panel">
-    <div class="container">
-      <div class="grid-2" style="max-width:900px; margin-inline:auto;">
-        <a href="/personal-work" class="card washes" style="--rule:#56B6B1; --wash:#E9F3F1;">
-          <h3>Personal Work</h3>
-          <p>Maybe you've been working on this for years. Maybe you woke up one day and realized something isn't right. Either way, the problem probably isn't what you think it is. And it probably isn't you.</p>
-          <span class="card-link" style="--rule:#56B6B1;">Explore Personal Work →</span>
-        </a>
-        <a href="/professional-work" class="card washes" style="--rule:#006073; --wash:#CCD8DE;">
-          <h3>Professional Work</h3>
-          <p>Organizations don't struggle because they lack smart people. They struggle because smart people keep misunderstanding each other. When people finally make sense, communication, leadership, and performance all change.</p>
-          <span class="card-link" style="--rule:#006073;">Bring This to Your Team →</span>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <hr class="hairline-gold" />
-
-  <!-- PANEL 5 · white · 50/50 split: photo left, copy right -->
+  <!-- PANEL 4 · white · 50/50 split: photo left, copy right -->
   <section class="panel">
     <div class="container split">
       <div class="photo-block" style="--block:#E9F3F1;">
@@ -135,6 +127,7 @@ import Base from "../layouts/Base.astro";
 <style>
   .hero-split { align-items: center; }
   .hero-split h1 { max-width: 19ch; }
+  .hero-doors { margin-top: clamp(2.25rem, 4.5vw, 3.5rem); }
 
   /* the brand's opening note: letterspaced Gold caps, one step larger than an eyebrow */
   .opening-note {

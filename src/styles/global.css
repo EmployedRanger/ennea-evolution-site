@@ -148,13 +148,28 @@ em { font-style: italic; }
 }
 
 /* ---------- gold hairline (brightness kit #1) ----------
-   A short centered rule between consecutive WHITE panels only. */
+   Section break between consecutive WHITE panels only. A faint
+   container-width rule makes the break obvious; a short, bolder gold
+   bar centered on it is the jewelry. Compact: one line of height. */
 .hairline-gold {
-  width: 80px;
+  position: relative;
+  width: min(var(--maxw), calc(100% - 2 * clamp(1.25rem, 4vw, 2.5rem)));
   height: 1px;
-  background: var(--gold);
+  background: rgba(51, 48, 43, 0.11);
   border: 0;
   margin: 0 auto;
+  overflow: visible;
+}
+.hairline-gold::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 104px;
+  height: 3px;
+  border-radius: 3px;
+  background: var(--gold);
 }
 
 /* ---------- accent marks (brightness kit #2) ----------
