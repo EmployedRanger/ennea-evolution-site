@@ -4,11 +4,8 @@ import NineDots from "./NineDots.astro";
 <footer class="footer">
   <div class="container">
     <div class="foot-brand">
-      <span class="mark"><img src="/img/mark-white.png" alt="" width="44" height="44" loading="lazy" /></span>
-      <div>
-        <p class="wordmark">Ennea Evolution</p>
-        <p class="thesis">People make sense.</p>
-      </div>
+      <span class="foot-logo"><img src="/logo/logo-full.png" alt="Ennea Evolution" width="220" height="76" loading="lazy" /></span>
+      <p class="thesis">People make sense.</p>
     </div>
 
     <nav class="foot-nav" aria-label="Footer">
@@ -40,10 +37,16 @@ import NineDots from "./NineDots.astro";
     color: #ffffff;
     padding-block: clamp(2.75rem, 6vw, 4.5rem) 2rem;
   }
-  .foot-brand { display: flex; align-items: center; gap: 1rem; justify-content: center; margin-bottom: 1.75rem; }
-  .mark { color: #ffffff; opacity: 0.9; flex-shrink: 0; }
-  .wordmark { font-family: var(--serif); font-size: 1.45rem; margin: 0; line-height: 1.2; }
-  .thesis { margin: 0; font-size: 0.95rem; opacity: 0.85; }
+  .foot-brand { display: flex; flex-direction: column; align-items: center; gap: 0.9rem; margin-bottom: 1.75rem; }
+  .foot-logo {
+    display: inline-flex;
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 0.85rem 1.35rem;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+  }
+  .foot-logo img { height: 46px; width: auto; display: block; }
+  .thesis { margin: 0; font-size: 0.95rem; opacity: 0.9; }
 
   .foot-nav { display: flex; flex-wrap: wrap; gap: 0.4rem 1.6rem; justify-content: center; margin-bottom: 1.4rem; }
   .foot-nav a { color: #ffffff; font-weight: 550; font-size: 0.95rem; }
