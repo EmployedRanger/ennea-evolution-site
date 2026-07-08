@@ -37,14 +37,13 @@ const services = [
   },
 ];
 
-// Client logos as one-color Teal marks. South Family Dental and Welch Music
-// have no art files yet; they render as typographic marks until logos land.
+// Client logos as one-color Teal marks. M Squared, South Family Dental, and
+// Welch Music render as typographic marks (no clean one-color art file).
 const logos = [
   { src: "/img/logos/modern-expo-teal.png", alt: "Modern Expo and Events" },
   { src: "/img/logos/small-satellite-conference-teal.png", alt: "Small Satellite Conference" },
   { src: "/img/logos/plan-to-eat-teal.png", alt: "Plan to Eat" },
-  { src: "/img/logos/power-driven-diesel-teal.png", alt: "Power Driven Diesel" },
-  { src: "/img/logos/total-tree-care-teal.png", alt: "Total Tree Care" },
+  { src: "/img/logos/hlo-lighting-teal.png", alt: "HLO Lighting" },
 ];
 ---
 
@@ -74,11 +73,12 @@ const logos = [
     <div class="container">
       <blockquote class="pullquote testimonial" style="--accent:var(--teal); margin-block:0 2.5rem; max-width:38ch;">
         "I thought this would be a good team day. I didn't expect it to change the way people talked to each other the next week."
-        <cite>CEO / Owner (draft quote, confirm before launch)</cite>
+        <cite>Grant, M Squared</cite>
       </blockquote>
       <h4 class="center" style="margin-bottom:1.75rem;">Some of the teams I've worked with</h4>
       <div class="logo-row">
         {logos.map((l) => <img src={l.src} alt={l.alt} />)}
+        <span class="logo-text">M Squared</span>
         <span class="logo-text">South Family Dental</span>
         <span class="logo-text">Welch Music</span>
       </div>
@@ -159,7 +159,7 @@ const logos = [
       </div>
       <div class="photo-block" style="--block:#FFF7E7;">
         <div class="photo">
-          <img src="/img/candace-pro.jpg" alt="Candace Malmstrom, warm and confident" width="1000" height="1495" loading="lazy" />
+          <img src="/img/manage-win.jpg" alt="Two colleagues sharing a genuine, laughing high five" width="1400" height="933" loading="lazy" />
         </div>
       </div>
     </div>
