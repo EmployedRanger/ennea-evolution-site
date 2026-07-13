@@ -6,7 +6,44 @@ import Footer from "../components/Footer.astro";
 const {
   title = "Ennea Evolution, Counseling, Coaching & Team Development",
   description = "Most people try to change their lives. Candace helps them understand why their lives make sense. Counseling and coaching for individuals, and people-first development for teams. Cache Valley, Utah and by Zoom.",
+  image = "/og-default.jpg",
+  type = "website",
+  noindex = false,
 } = Astro.props;
+
+const site = Astro.site ?? new URL("https://enneaevolution.com");
+const pathname = Astro.url.pathname.endsWith("/") ? Astro.url.pathname : `${Astro.url.pathname}/`;
+const canonical = new URL(pathname, site).href;
+const ogImage = new URL(image, site).href;
+
+const orgSchema = {
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  name: "Ennea Evolution",
+  description:
+    "Counseling and coaching for individuals, and Enneagram-based team development for organizations, with Candace Malmstrom.",
+  url: site.href,
+  telephone: "+1-435-881-0193",
+  email: "enneaevolution@gmail.com",
+  image: new URL("/og-default.jpg", site).href,
+  logo: new URL("/logo/logo-full.png", site).href,
+  priceRange: "$$",
+  founder: { "@type": "Person", name: "Candace Malmstrom" },
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Logan",
+    addressRegion: "UT",
+    addressCountry: "US",
+  },
+  areaServed: [
+    { "@type": "AdministrativeArea", name: "Cache Valley, Utah" },
+    { "@type": "State", name: "Utah" },
+    { "@type": "State", name: "Idaho" },
+    { "@type": "State", name: "Colorado" },
+  ],
+  knowsAbout: ["Enneagram", "Counseling", "Coaching", "Team Development", "Leadership"],
+  availableChannel: { "@type": "ServiceChannel", availableLanguage: "English" },
+};
 ---
 
 <!doctype html>
@@ -16,7 +53,14 @@ const {
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{title}</title>
     <meta name="description" content={description} />
-    <link rel="icon" type="image/png" href="/logo/logo-full.png" />
+    <link rel="canonical" href={canonical} />
+    <meta name="robots" content={noindex ? "noindex, nofollow" : "index, follow"} />
+    <meta name="theme-color" content="#006073" />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -25,9 +69,22 @@ const {
       rel="stylesheet"
     />
 
+    <meta property="og:site_name" content="Ennea Evolution" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta property="og:type" content="website" />
+    <meta property="og:type" content={type} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:locale" content="en_US" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+
+    <script type="application/ld+json" set:html={JSON.stringify(orgSchema)} />
   </head>
   <body>
     <Header />
