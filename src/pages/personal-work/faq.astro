@@ -35,12 +35,24 @@ const faqs = [
     a: "\"I don't know where to start\" is a perfectly good first sentence. Sorting it out together is the actual first step.",
   },
 ];
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((f) => ({
+    "@type": "Question",
+    name: f.q,
+    acceptedAnswer: { "@type": "Answer", text: f.a },
+  })),
+};
 ---
 
 <Base
   title="Personal Work FAQ · Ennea Evolution"
   description="The practical things people usually want to know before they reach out: cost, sessions, confidentiality, and the free consultation."
 >
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
   <!-- PANEL 1 · white · hero -->
   <section class="panel">
     <div class="container narrow">

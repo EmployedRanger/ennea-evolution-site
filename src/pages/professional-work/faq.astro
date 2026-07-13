@@ -39,12 +39,24 @@ const faqs = [
     a: "It builds on it. Most assessments describe behavior. The Enneagram explains the motivation underneath it, which is where communication and conflict actually live. Teams that have done other assessments tend to move faster here, because the self-reflection muscle is already warm.",
   },
 ];
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((f) => ({
+    "@type": "Question",
+    name: f.q,
+    acceptedAnswer: { "@type": "Answer", text: f.a },
+  })),
+};
 ---
 
 <Base
   title="Professional Work FAQ · Ennea Evolution"
   description="The practical questions companies ask, with straight answers: formats, pricing, travel, and what teams walk away with."
 >
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
   <!-- PANEL 1 · white · hero -->
   <section class="panel">
     <div class="container narrow">
