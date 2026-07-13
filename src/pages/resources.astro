@@ -1,0 +1,100 @@
+---
+import Base from "../layouts/Base.astro";
+
+const resources = [
+  {
+    kicker: "Personal Work",
+    title: "Why You Keep Doing the Thing You Don't Want to Do",
+    body: "A short worksheet for finding the job your pattern is doing. You already know the pattern. You've named it, promised to stop, and found yourself right back in it. This walks you through what it's quietly protecting, so change can stop feeling like a fight.",
+    file: "/resources/why-you-keep-doing-the-thing.pdf",
+    sig: "#006073",
+    wash: "#E9F3F1",
+  },
+  {
+    kicker: "For Leaders",
+    title: "The Meeting After the Meeting",
+    body: "A worksheet on the human system underneath the work. For the recurring problem a smart team keeps colliding on, the one no new process seems to fix. It helps you separate the surface story from the one that's actually running the team.",
+    file: "/resources/the-meeting-after-the-meeting.pdf",
+    sig: "#9C1B30",
+    wash: "#F2CFC5",
+  },
+];
+---
+
+<Base
+  title="Resources · Ennea Evolution"
+  description="Free worksheets from Ennea Evolution. Short, practical reads for personal work and for leaders. Download and keep."
+>
+  <!-- PANEL 1 · white · hero -->
+  <section class="panel">
+    <div class="container narrow">
+      <p class="eyebrow" style="--accent:var(--teal);">Resources</p>
+      <h1>Free worksheets, yours to keep.</h1>
+      <p class="lead">Short, practical reads that give you a real taste of the work. A few minutes each, nothing to sign up for. Download one, sit with it, and see what it turns up.</p>
+    </div>
+  </section>
+
+  <hr class="hairline-gold" />
+
+  <!-- PANEL 2 · white · resource cards -->
+  <section class="panel">
+    <div class="container">
+      <div class="resources-grid">
+        {resources.map((r) => (
+          <div class="resource" style={`--sig:${r.sig}; --wash:${r.wash};`}>
+            <p class="kicker">{r.kicker}</p>
+            <h3>{r.title}</h3>
+            <p class="desc">{r.body}</p>
+            <a href={r.file} class="btn dl" download>Download worksheet (PDF)</a>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <hr class="hairline-gold" />
+
+  <!-- PANEL 3 · white · close -->
+  <section class="panel center">
+    <div class="container narrow">
+      <p style="margin-bottom:1.25rem;">When you're ready to take it further, the first step is a short, free conversation.</p>
+      <a href="/get-started" class="btn">Schedule a Free 15-Minute Call</a>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .resources-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(1.5rem, 4vw, 2.5rem);
+    max-width: 980px;
+    margin-inline: auto;
+  }
+  @media (max-width: 760px) {
+    .resources-grid { grid-template-columns: 1fr; }
+  }
+  .resource {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-top: 4px solid var(--sig);
+    border-radius: 16px;
+    padding: clamp(1.6rem, 3vw, 2.4rem);
+    box-shadow: var(--shadow);
+  }
+  .resource .kicker {
+    font-family: var(--sans);
+    font-size: 0.72rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--sig);
+    margin: 0 0 0.9rem;
+  }
+  .resource h3 { margin: 0 0 0.75rem; }
+  .resource .desc { margin: 0 0 1.75rem; }
+  .resource .dl { margin-top: auto; }
+</style>

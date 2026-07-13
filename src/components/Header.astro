@@ -42,6 +42,7 @@ const active = (p) => (path === p || path.startsWith(p + "/") ? "active" : "");
           </div>
         </li>
         <li><a href="/enneagram" class={`nav-link ${active("/enneagram")}`}>The Enneagram</a></li>
+        <li><a href="/resources" class={`nav-link ${active("/resources")}`}>Resources</a></li>
         <li><a href="/about" class={`nav-link ${active("/about")}`}>About</a></li>
       </ul>
       <a href="/get-started" class="btn nav-cta">Get Started</a>
@@ -59,6 +60,7 @@ const active = (p) => (path === p || path.startsWith(p + "/") ? "active" : "");
     <a href="/professional-work">Professional Work</a>
     {professional.map((i) => <a class="sub" href={i.href}>{i.label}</a>)}
     <a href="/enneagram">The Enneagram</a>
+    <a href="/resources">Resources</a>
     <a href="/about">About</a>
     <a href="/get-started" class="btn" style="margin-top:1rem;">Get Started</a>
   </div>
