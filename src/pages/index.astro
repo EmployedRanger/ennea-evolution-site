@@ -3,25 +3,22 @@ import Base from "../layouts/Base.astro";
 ---
 
 <Base>
-  <!-- PANEL 1 · white · hero split (copy + photo) with the two doors below, in place of buttons -->
+  <!-- SECTION 1 · white · hero split (copy + photo) with the two doors below -->
   <section class="panel">
     <div class="container split hero-split">
       <div>
-        <p class="opening-note">People Make Sense</p>
-        <h1>Most people try to change their lives. I help them understand why their lives make sense.</h1>
-        <p class="lead">
-          Whether you're trying to change your own life or help a team work better together, it starts in the same
-          place: not with trying harder, but with understanding why the hard thing keeps happening.
-        </p>
+        <h1>People make sense.</h1>
+        <p class="lead">Including you. Including the person you can't figure out.</p>
+        <p>Once you can see the pattern, you have choices you didn't have before.</p>
       </div>
       <div class="photo-block" style="--block:var(--gold);">
         <div class="photo">
-          <img src="/img/home-hero-selfie.jpg" alt="A group of friends laughing together outdoors" width="1600" height="900" />
+          <img src="/img/home-hero-idea.jpg" alt="A person lit up mid-thought, an idea landing" width="1400" height="788" />
         </div>
       </div>
     </div>
 
-    <!-- the two doors, in place of the hero buttons: step straight into either side -->
+    <!-- SECTION 2 · the two doors -->
     <div class="container hero-doors">
       <div class="grid-2" style="max-width:940px; margin-inline:auto;">
         <a href="/personal-work" class="card washes" style="--rule:#56B6B1; --wash:#E9F3F1;">
@@ -31,7 +28,7 @@ import Base from "../layouts/Base.astro";
         </a>
         <a href="/professional-work" class="card washes" style="--rule:#006073; --wash:#CCD8DE;">
           <h3>Professional Work</h3>
-          <p>Organizations don't struggle because they lack smart people. They struggle because smart people keep misunderstanding each other. When people finally make sense, communication, leadership, and performance all change.</p>
+          <p>You have capable people doing demanding work. The work matters, and so do the people carrying it. Give them the communication, leadership, and understanding that keep good work going.</p>
           <span class="card-link" style="--rule:#006073;">Bring This to Your Team →</span>
         </a>
       </div>
@@ -40,18 +37,7 @@ import Base from "../layouts/Base.astro";
 
   <hr class="hairline-gold" />
 
-  <!-- PANEL 2 · white · single column, generous margins -->
-  <section class="panel">
-    <div class="container narrow">
-      <p>You already know how this goes. The promise to speak up next time. The apology you didn't owe. The meeting that ended in agreement and fell apart before lunch.</p>
-      <p>You've read the books and tried the strategies. You can describe the problem in detail, which is somehow the most frustrating part, because understanding it from the outside hasn't changed it.</p>
-      <p>The pattern you can't seem to break is doing a job. It makes sense once you understand what it's been accomplishing, even if it no longer fits the life you're living. That's why trying harder rarely works. You can't out-muscle something you haven't understood.</p>
-      <p>So we don't start with strategies. We start by understanding what the pattern has been doing for you. Sometimes that's enough. Sometimes that understanding opens the door to deeper work. Either way, change stops feeling like a fight and starts feeling like a choice.</p>
-      <blockquote class="pullquote" style="--accent:var(--teal);">The behavior is real. It just isn't the whole story.</blockquote>
-    </div>
-  </section>
-
-  <!-- PANEL 3 · tint #E9F3F1 · two columns, recognition rows -->
+  <!-- SECTION 4 · tint #E9F3F1 · Different rooms (moved up, first after the doors) -->
   <section class="panel tint-band" style="--tint:#E9F3F1;">
     <div class="container">
       <h3 class="center" style="margin-bottom:2.5rem;">Different rooms. Same thing underneath.</h3>
@@ -70,17 +56,28 @@ import Base from "../layouts/Base.astro";
         <div>
           <h4>At work</h4>
           <ul class="recognition-rows" style="--dot:#006073;">
+            <li>You promoted them because they were great at the work. Now they're leading the people doing it, with almost no training for that part.</li>
             <li>The meeting ends, and the real meeting starts in the parking lot.</li>
-            <li>You said it clearly. They heard something else. Now there are two stories.</li>
-            <li>Everyone agrees on the goal and keeps colliding on the way there.</li>
+            <li>You have a team that works well together, and it took real work to get there. Someone new starts Monday.</li>
             <li>There's a person everyone has quietly learned to work around, and it's costing more than anyone says out loud.</li>
+            <li>Nothing is broken. You want to build something worth staying for.</li>
           </ul>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- PANEL 4 · white · 50/50 split: photo left, copy right -->
+  <!-- SECTION 5 · white · new: we start with understanding -->
+  <section class="panel">
+    <div class="container narrow">
+      <h3>We start with understanding</h3>
+      <p>You've read the books. Your team has done the trainings. You can probably name the thing that keeps happening, in detail, which is somehow the most frustrating part, because naming it from the outside hasn't changed it.</p>
+      <p>When something keeps happening, it's usually accomplishing something. That's why advice bounces off, and why trying harder tends to produce the same thing at higher volume. So we start with what's actually going on and why it makes sense. Then the tools work, because they're finally aimed at the right thing.</p>
+      <blockquote class="pullquote" style="--accent:var(--teal);">The behavior is real. It just isn't the whole story.</blockquote>
+    </div>
+  </section>
+
+  <!-- SECTION 6 · white · 50/50 split: photo left, copy right -->
   <section class="panel">
     <div class="container split">
       <div class="photo-block" style="--block:#E9F3F1;">
@@ -90,33 +87,30 @@ import Base from "../layouts/Base.astro";
       </div>
       <div>
         <h3>Meet Candace</h3>
-        <p>I spend my week in two very different rooms: counseling individuals, and working with organizations. Each one sharpens the other. Sitting with people one at a time is how I know what actually moves them, not in theory, in practice, and that's what I bring to companies. And working inside real teams every week is how the individual work stays practical instead of philosophical.</p>
+        <p>I spend half my week with people one at a time, and the other half inside the companies they work for. It's the same work, and once you can see how a person is built, the hard parts stop being mysterious.</p>
         <a href="/about" class="arrow-link" style="--accent:var(--teal);">More about me →</a>
       </div>
     </div>
   </section>
 
-  <!-- PANEL 6 · statement band · Teal, white text · the boldest moment on the site -->
+  <!-- SECTION 7 · statement band · Teal, white text · the moment we're after -->
   <section class="panel statement-band center">
     <div class="container narrow">
-      <p class="statement-words">People Make Sense</p>
+      <p class="statement-heading">The moment we're after</p>
       <hr class="gold-rule" />
-      <p class="statement-sub">In patterns. In relationships. In teams. In the places we keep getting stuck.</p>
       <p class="statement-quote">"Everything makes sense now. I know what to do. And I feel capable of doing it."</p>
-      <p class="statement-after">That's the moment we're after.</p>
+      <p class="statement-cite">Lisa, private client</p>
+      <p class="statement-after">Not a new personality to build. Not a system to keep up. Just a clear view of what's actually happening, and what to do with it.</p>
     </div>
   </section>
 
-  <!-- PANEL 7 · white · centered close -->
+  <!-- SECTION 8 · white · centered close -->
   <section class="panel center">
     <div class="container narrow">
       <h3>Start here</h3>
-      <p>
-        You don't have to know what's wrong.<br />
-        You don't have to know where to begin.<br />
-        You only have to be willing to understand what's actually happening.<br />
-        We'll figure out the rest together.
-      </p>
+      <p>You don't have to know what's wrong and you don't have to know where to start.</p>
+      <p>Some people come because things hurt. Some come because things are good and they'd like them better. Both are the right reason.</p>
+      <p>Tell me a little, and we'll figure out the rest together.</p>
       <div class="btn-row" style="justify-content:center; margin-top:1.75rem;">
         <a href="/personal-work" class="btn">Start Personal Work</a>
         <a href="/professional-work" class="btn btn-outline">Bring This to Your Team</a>
@@ -127,7 +121,7 @@ import Base from "../layouts/Base.astro";
 
 <style>
   .hero-split { align-items: center; }
-  .hero-split h1 { max-width: 19ch; }
+  .hero-split h1 { max-width: 12ch; }
   .hero-doors { margin-top: clamp(2.25rem, 4.5vw, 3.5rem); }
 
   /* two recognition lists, clearly separated by a divider */
@@ -143,33 +137,26 @@ import Base from "../layouts/Base.astro";
     .rooms-divider { width: auto; height: 1px; margin-block: 2rem; }
   }
 
-  /* the brand's opening note: letterspaced Gold caps, one step larger than an eyebrow */
-  .opening-note {
-    font-family: var(--sans);
-    font-size: 0.95rem;
-    font-weight: 700;
-    letter-spacing: 0.26em;
-    text-transform: uppercase;
-    color: var(--gold);
-    margin: 0 0 1.1rem;
-  }
-
-  .statement-words {
+  /* the moment we're after: heading, quote, attribution, closing line */
+  .statement-heading {
     font-family: var(--serif);
-    font-size: clamp(2.6rem, 7vw, 4.6rem);
-    line-height: 1.05;
-    letter-spacing: 0.01em;
-    text-transform: uppercase;
-    margin: 0 0 0.4rem;
+    font-size: clamp(1.9rem, 4vw, 2.9rem);
+    line-height: 1.1;
+    margin: 0 0 0.6rem;
   }
-  .statement-sub { font-size: clamp(1.05rem, 1.8vw, 1.25rem); margin-bottom: 2rem; }
   .statement-quote {
     font-family: var(--serif);
     font-style: italic;
     font-size: clamp(1.25rem, 2.4vw, 1.7rem);
     line-height: 1.4;
     max-width: 32ch;
-    margin: 0 auto 1.1rem;
+    margin: 1.4rem auto 0.6rem;
   }
-  .statement-after { margin: 0; opacity: 0.9; }
+  .statement-cite {
+    font-size: 0.95rem;
+    letter-spacing: 0.04em;
+    opacity: 0.85;
+    margin: 0 0 1.6rem;
+  }
+  .statement-after { margin: 0 auto; max-width: 46ch; opacity: 0.9; }
 </style>
