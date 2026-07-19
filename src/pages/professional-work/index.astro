@@ -4,9 +4,9 @@ import NineDots from "../../components/NineDots.astro";
 
 const services = [
   {
-    cat: "Communication",
-    name: "See People Clearly",
-    body: "A two-part Enneagram workshop. Your team learns themselves first, then each other. Most companies start here.",
+    cat: "Foundation",
+    name: "People Make Sense",
+    body: "A clear, practical map for why people do what they do. Your team learns what they need, how they communicate, and what gets harder under pressure.",
     href: "/professional-work/see-people-clearly",
     sig: "#006073",
     wash: "#AAC1CB",
@@ -49,15 +49,15 @@ const logos = [
 
 <Base
   title="Professional Work · Ennea Evolution"
-  description="Build a team that works well together. Enneagram workshops, manager development, and workplace support. Learning and laughter go together here."
+  description="There's no such thing as just business. Communication, leadership, and understanding that keep good work possible, brought to your team."
 >
   <!-- PANEL 1 · white · hero split: copy left, photo right -->
   <section class="panel">
     <div class="container split" style="align-items:center;">
       <div>
         <p class="eyebrow" style="--accent:var(--teal);">Professional Work</p>
-        <h1>Build a team that works <em class="mk-underline">well</em> together.</h1>
-        <p class="lead">We bring the Enneagram, and a genuinely different kind of experience, to your team. Learning and laughter go together here. That's what a day with Ennea Evolution feels like.</p>
+        <h1>There's no such thing as <em class="mk-underline">just</em> business.</h1>
+        <p class="lead">You have capable people doing demanding work. The work matters, and so do the people doing it. Give them the communication, leadership, and understanding that keeps good work possible.</p>
         <a href="/get-started" class="btn" style="margin-top:1rem;">Let's Talk</a>
       </div>
       <div class="photo-block" style="--block:var(--gold);">
@@ -73,7 +73,7 @@ const logos = [
     <div class="container">
       <blockquote class="pullquote testimonial" style="--accent:var(--teal); margin-block:0 2.5rem; max-width:38ch;">
         "I thought this would be a good team day. I didn't expect it to change the way people talked to each other the next week."
-        <cite>Grant, M Squared</cite>
+        <cite>Carlos, Team Lead for Onsite Operations</cite>
       </blockquote>
       <h4 class="center" style="margin-bottom:1.75rem;">Some of the teams I've worked with</h4>
       <div class="logo-row">
@@ -127,6 +127,13 @@ const logos = [
     </div>
   </section>
 
+  <!-- fixing/building statement, centered, larger -->
+  <section class="panel center" style="padding-top:0;">
+    <div class="container narrow">
+      <p class="statement-line">Fixing is seeing what's wrong. Building is seeing what's possible. We will do some of both.</p>
+    </div>
+  </section>
+
   <hr class="hairline-gold" />
 
   <!-- PANEL 5 · white · 50/50 split: photo left, copy right -->
@@ -148,18 +155,32 @@ const logos = [
 
   <hr class="hairline-gold" />
 
+  <!-- On Retainer · white · copy section between workshop and Why me -->
+  <section class="panel">
+    <div class="container narrow">
+      <h3>On Retainer</h3>
+      <p>Some companies don't want a workshop. They want somebody who knows them. On retainer, I become a standing part of how your company takes care of its people. Sometimes it's quarterly workshops planned around what your company actually needs. Sometimes it's a set number of confidential sessions each month that anyone in the company can sign up for, so your people have somewhere to take the hard thing. Sometimes it's building a culture from scratch and staying long enough to see it through. Often it's a mix, and it changes as you do.</p>
+      <p>What you're getting is a thought partner who knows your business and your people, and who brings a skill set most companies can't justify carrying full time. You get the benefit without the salary.</p>
+      <p>By the end of a year, this isn't a workshop your company attended. It's how your company talks.</p>
+    </div>
+  </section>
+
+  <hr class="hairline-gold" />
+
   <!-- PANEL 6 · white · 50/50 split: copy left, photo right -->
   <section class="panel">
     <div class="container split">
       <div>
         <h3>Why me</h3>
         <p>Half my week is one-on-one with people, up close, under real pressure. So none of this is theory. I watch how people really operate, then bring it into your building.</p>
-        <p>I've taught this in research labs, medical offices, software companies, and event organizations. The setting changes. People don't. Because there's no such thing as just business. There's only life, and a good share of it happens at work, in the company you keep.</p>
-        <p>Teams at Modern Expo, the Small Satellite Conference, Plan to Eat, Power Driven Diesel, South Family Dental, and Welch Music have brought this to their organizations.</p>
+        <p>I have taught in research labs, software companies, medical offices, family businesses, event organizations, and large teams.</p>
+        <p>I am not bringing a canned workshop. I am paying attention to your people.</p>
+        <p>And I've sat where you're sitting. My husband and I have started, run, and sold businesses of our own. I know what it costs when the people part goes wrong, and I know what it feels like to make payroll.</p>
+        <p class="credential">Conflict resolution counselor, mediator, coach, and Enneagram practitioner.</p>
       </div>
       <div class="photo-block" style="--block:#FFF7E7;">
         <div class="photo">
-          <img src="/img/manage-win.jpg" alt="Two colleagues sharing a genuine, laughing high five" width="1400" height="933" loading="lazy" />
+          <img src="/img/candace-pro.jpg" alt="Candace Malmstrom, warm and confident" width="1000" height="1495" loading="lazy" />
         </div>
       </div>
     </div>
@@ -171,7 +192,7 @@ const logos = [
   <section class="panel center">
     <div class="container narrow">
       <h3>Bring this to your team</h3>
-      <p>Tell me a little about your team. I'll tell you whether I can help, and what it would look like.</p>
+      <p>Tell me what is happening in your company. I will tell you what I think would help, what probably will not, and where I would start.</p>
       <a href="/get-started" class="btn" style="margin-top:0.5rem;">Let's Talk</a>
     </div>
   </section>
@@ -187,6 +208,21 @@ const logos = [
     gap: clamp(1rem, 2.2vw, 1.9rem);
   }
   .logo-row img { height: 28px; width: auto; }
+
+  /* fixing/building line: centered, larger than body */
+  .statement-line {
+    font-family: var(--serif);
+    font-size: clamp(1.35rem, 2.8vw, 2rem);
+    line-height: 1.35;
+    max-width: 26ch;
+    margin: 0 auto;
+  }
+  .credential {
+    font-size: 0.92rem;
+    font-style: italic;
+    opacity: 0.8;
+    margin-top: 1.25rem;
+  }
   .logo-text {
     font-family: var(--serif);
     color: var(--teal);
